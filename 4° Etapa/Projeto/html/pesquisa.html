@@ -9,11 +9,14 @@
     <header>
         <div id="cabPrinc">
             <a href="index.html" target="_self">    <!--Link para area de sobre do site-->
-                <img src="" alt="logo - KORTEX">
+                <img src="../img/Kortex_logomarca.png" alt="logo - KORTEX" width="250px">
             </a>
             <form action="" method="post">
-                <input type="text" name="" id="">   <!--Barra de pesquisa-->
-                <input type="submit" name="pesquisar">  <!--Botão de enviar-->
+                <input type="text" name="" id="" size="60px">   <!--Barra de pesquisa-->
+                <!--<input type="submit" name="pesquisar">-->  <!--Botão de enviar-->
+                <a href="pesquisa.html" target="_self">
+                    <img src="../img/Lupa.png" alt="pesquisar" width="30">
+                </a>
             </form>
             <ul id="conect">
                 <li>
@@ -26,7 +29,17 @@
         </div>
         <div id="cabSec">   <!--Menu principal do site-->
             <ul id="menu">
-                <li id="categoria">CATEGORIA</li>
+                <li>
+                    <select name="categoria" id="">
+                        <option value="0" selected>CATEGORIA</option>
+                        <option value="">Hardware & Componentes</option>
+                        <option value="">Computadores e Notebooks</option>
+                        <option value="">Priféricos</option>
+                        <option value="">Redes & Conectividade</option>
+                        <option value="">Áudio</option>
+                        <option value="">Peças e concerto</option>
+                    </select>
+                </li>
                 <li>HARDWARE</li>
                 <li>PERIFÉRICOS</li>
                 <li>REDES</li>
@@ -35,17 +48,17 @@
             <ul id="tools">     <!--Area de opções [montar PC, carrinho, lista de desejos]-->
                 <li>
                     <a href="#" target="_self">
-                        <img src="" alt="Montar PC">
+                        <img src="../img/Tools.png" alt="Montar PC" width="25">
                     </a>
                 </li>
                 <li>
                     <a href="#" target="_self">
-                        <img src="" alt="Carrinho">
+                        <img src="../img/Shopping Cart.png" alt="Carrinho" width="25">
                     </a>
                 </li>
                 <li>
                     <a href="#" target="_self">
-                        <img src="" alt="Lista de desejos">
+                        <img src="../img/Love.png" alt="Lista de desejos" width="25">
                     </a>
                 </li>
             </ul>
@@ -54,27 +67,28 @@
     <main>
         <div id="mapBordo">
             <a href="index.html" target="_self">
-                <img src="" alt="Logo KORTEX">
+                <img src="../img/logo_kortex_pequena.png" alt="Logo KORTEX" width="25px">
             </a>
             >
             <a href="#">Hardware de computados</a>
             >
-            <a href="pesquisa.html" target="_self">Placas-mãe - AMD</a>
+            <a href="index.html" target="_self">Placas-mãe - AMD</a>
         </div>
         <section id="ADS">
-            <img src="" alt="ADS - foto">
+            <img src="../img/Imagem_ads.png" alt="ADS - foto" width="30%">
             <h3>O futuro é agora e é Ryzen</h3>
             <p>Fiqe á frente com um desempenho que só melhora</p>
-            <a href="#">Saiba mais</a>
-            <img src="" alt="logo ADS">
+            <a href="#" target="_self">Saiba mais</a>
+            <img src="../img/logo_ads.png
+            " alt="logo ADS">
         </section>
         <section id="titulo">
             <h1>Placas-mãe - AMD</h1>
-            <a href="#">Ler mais</a>
+            <a href="#" target="_self">Ler mais</a>
             <p>
                 Precisa de ajuda para escolher a placa certa? Leia nosso
             </p>
-            <a href="#">Guia de compra de placas-mãe AMD</a>
+            <a href="#" target="_self">Guia de compra de placas-mãe AMD</a>
         </section>
         <section id="galeriaProdutos">
             <article id="filtro">
@@ -101,29 +115,37 @@
                     <hr>
 
                     <!-- Mais filtros  -->
+                    <!-- 
+                        +
+                        +
+                        +
+                        +
+                    -->
 
                 </form>
                 
             </article>
             <article id="anuncioProduto">
-                <a href="produto.html" class="infoProduto">     <!--Link que direciona as informações do produto-->
+                <a href="produto.html" class="infoProduto" target="_self">     <!--Link que direciona as informações do produto-->
                     <div class="produtoHorisontal">
                         <div class="esquerda">
-                            <img src="" alt="Imagem produto">
+                            <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
                             <p>Novo</p>     <!--Aviso-->
                             <h3>ASUS Pro WS TRX50-SAGE WIFI, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 4x M.2, 10/2,5 GbE, USB 3.2 Gen2, CEB</h3>     <!--Descrição do produto-->
-                            <a href="#">NN162612</a>    <!--Cod produto-->
-                            <p>Subistituição</p>
+                            <a href="#" target="_self">NN162612</a>    <!--Cod produto-->
+                            <p><img src="../img/48h.png" alt="Icone de 48horas" width="40px">Subistituição</p>
                         </div>
                         <div class="direita">
-                            <a href="#">
-                                <img src="" alt="Lista de desejos">
+                            <a href="#" target="_self">
+                                <img src="../img/Heart.png" alt="Lista de desejos" width="25px">
                             </a>
-                            <a href="#">
-                                <img src="" alt="Carrinho">
+                            <a href="#" target="_self">
+                                <img src="../img/Add_shopping_cart.png" alt="Carrinho" width="25px">
                             </a>
                             <h2>R$ <strong>4.835,00</strong></h2>
-                            <p>Comprar</p>
+                            <form action="produto.html" method="post">
+                                <input type="submit" value="COMPRAR">
+                            </form>
                         </div>
                     </div>
                 </a>
@@ -134,38 +156,38 @@
         </section>
     </main>
     <footer>
-        <img src="" alt="Logomarca">
+        <img src="../img/logo_kortex_footer_titulo.png" alt="Logomarca" width="200px">
         <div id="logoSocial">
-            <img src="" alt="Logo">
+            <img src="../img/logo_kortex_esquerda_footer.png" alt="Logo" width="300px">
             <ul>    <!--Lista de links de midias sociais-->
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="../img/Icone_facebook.png" alt="" width="2%">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://x.com/" target="_blank">
+                        <img src="../img/Icone_x.png" alt="" width="2%">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="../img/Icone_linkedin.png" alt="" width="2%">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="../img/Icone_youtube.png" alt="" width="2%">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../img/Icone_instagram.png" alt="" width="2%">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://discord.com/" target="_blank">
+                        <img src="../img/Icone_discord.png" alt="" width="2%">
                     </a>
                 </li>
                 
@@ -176,48 +198,25 @@
                 <h4></h4>
                 <ul>
                     <li>
-                        <a href="#"> Sobre nós </a>
+                        <a href="#" target="_self"> Sobre nós </a>
                     </li>
                     <li>
-                        <a href="#"> Programa de Afiliados </a>
+                        <a href="#" target="_self"> Programa de Afiliados </a>
                     </li>
                     <li>
-                        <a href="#"> Carreiras </a>
+                        <a href="#" target="_self"> Carreiras </a>
                     </li>
                     <li>
-                        <a href="#"> Privacidade e Cookies </a>
+                        <a href="#" target="_self"> Privacidade e Cookies </a>
                     </li>
                     <li>
-                        <a href="#"> Termos e condções </a>
+                        <a href="#" target="_self"> Termos e condções </a>
                     </li>
                     <li>
-                        <a href="#"> Mapa do site </a>
+                        <a href="#" target="_self"> Mapa do site </a>
                     </li>
                     <li>
-                        <a href="#"> Plano de Redução de Carbono </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="infoSec">
-                <h4></h4>
-                <ul>
-                    <li>
-                        <a href="#"> Conecte-se </a>
-                    </li>
-                    <li>
-                        <a href="#"> Criar uma conta </a>
-                    </li>
-                    <li>
-                        <a href="#"> Visão geral da conta </a>
-                    </li>
-                    <li>
-                        <a href="#"> Produtos de Destaque </a>
-                    </li>
-                    <li>
-                        <a href="#"> Histórico de pedidos </a>
-                    </li>
-                    <li>
-                        <a href="#"> Lista de desejos </a>
+                        <a href="#" target="_blank"> Plano de Redução de Carbono </a>
                     </li>
                 </ul>
             </div>
@@ -225,22 +224,22 @@
                 <h4></h4>
                 <ul>
                     <li>
-                        <a href="#"> Suporte 3XK </a>
+                        <a href="#" target="_self"> Conecte-se </a>
                     </li>
                     <li>
-                        <a href="#"> Avaliações de clientes </a>
+                        <a href="#" target="_self"> Criar uma conta </a>
                     </li>
                     <li>
-                        <a href="#"> Central de Ajuda </a>
+                        <a href="#" target="_self"> Visão geral da conta </a>
                     </li>
                     <li>
-                        <a href="#"> Devoluções </a>
+                        <a href="#" target="_self"> Produtos de Destaque </a>
                     </li>
                     <li>
-                        <a href="#"> Vendas </a>
+                        <a href="#" target="_self"> Histórico de pedidos </a>
                     </li>
                     <li>
-                        <a href="#"> Suporte técnico </a>
+                        <a href="#" target="_self"> Lista de desejos </a>
                     </li>
                 </ul>
             </div>
@@ -248,19 +247,42 @@
                 <h4></h4>
                 <ul>
                     <li>
-                        <a href="#"> Subistituição em 48 horas </a>
+                        <a href="#" target="_self"> Suporte 3XK </a>
                     </li>
                     <li>
-                        <a href="#"> Contas Gerenciadas do Setor Público/Empresarial </a>
+                        <a href="#" target="_self"> Avaliações de clientes </a>
                     </li>
                     <li>
-                        <a href="#"> Digitalizar Finanças </a>
+                        <a href="#" target="_self"> Central de Ajuda </a>
                     </li>
                     <li>
-                        <a href="#"> Créditos PayPal </a>
+                        <a href="#" target="_self"> Devoluções </a>
                     </li>
                     <li>
-                        <a href="#"> KortexProtect </a>
+                        <a href="#" target="_self"> Vendas </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self"> Suporte técnico </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="infoSec">
+                <h4></h4>
+                <ul>
+                    <li>
+                        <a href="#" target="_self"> Subistituição em 48 horas </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self"> Contas Gerenciadas do Setor Público/Empresarial </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self"> Digitalizar Finanças </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"> Créditos PayPal </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self"> KortexProtect </a>
                     </li>
                 </ul>
             </div>

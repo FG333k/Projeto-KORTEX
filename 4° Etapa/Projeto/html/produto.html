@@ -9,11 +9,14 @@
     <header>
         <div id="cabPrinc">
             <a href="index.html" target="_self">    <!--Link para area de sobre do site-->
-                <img src="" alt="logo - KORTEX">
+                <img src="../img/Kortex_logomarca.png" alt="logo - KORTEX" width="250px">
             </a>
             <form action="" method="post">
-                <input type="text" name="" id="">   <!--Barra de pesquisa-->
-                <input type="submit" name="pesquisar">  <!--Botão de enviar-->
+                <input type="text" name="" id="" size="60px">   <!--Barra de pesquisa-->
+                <!--<input type="submit" name="pesquisar">-->  <!--Botão de enviar-->
+                <a href="pesquisa.html" target="_self">
+                    <img src="../img/Lupa.png" alt="pesquisar" width="30">
+                </a>
             </form>
             <ul id="conect">
                 <li>
@@ -26,7 +29,17 @@
         </div>
         <div id="cabSec">   <!--Menu principal do site-->
             <ul id="menu">
-                <li id="categoria">CATEGORIA</li>
+                <li>
+                    <select name="categoria" id="">
+                        <option value="0" selected>CATEGORIA</option>
+                        <option value="">Hardware & Componentes</option>
+                        <option value="">Computadores e Notebooks</option>
+                        <option value="">Priféricos</option>
+                        <option value="">Redes & Conectividade</option>
+                        <option value="">Áudio</option>
+                        <option value="">Peças e concerto</option>
+                    </select>
+                </li>
                 <li>HARDWARE</li>
                 <li>PERIFÉRICOS</li>
                 <li>REDES</li>
@@ -35,17 +48,17 @@
             <ul id="tools">     <!--Area de opções [montar PC, carrinho, lista de desejos]-->
                 <li>
                     <a href="#" target="_self">
-                        <img src="" alt="Montar PC">
+                        <img src="../img/Tools.png" alt="Montar PC" width="25">
                     </a>
                 </li>
                 <li>
                     <a href="#" target="_self">
-                        <img src="" alt="Carrinho">
+                        <img src="../img/Shopping Cart.png" alt="Carrinho" width="25">
                     </a>
                 </li>
                 <li>
                     <a href="#" target="_self">
-                        <img src="" alt="Lista de desejos">
+                        <img src="../img/Love.png" alt="Lista de desejos" width="25">
                     </a>
                 </li>
             </ul>
@@ -54,7 +67,7 @@
     <main>
         <div id="mapBordo">
             <a href="index.html" target="_self">
-                <img src="" alt="Logo KORTEX">
+                <img src="../img/logo_kortex_pequena.png" alt="Logo KORTEX" width="25px">
             </a>
             >
             <a href="#">Hardware de computados</a>
@@ -67,121 +80,500 @@
         </div>
         <section id="produto">
             <div id="imagens">
-                <img src="" alt="Logomarca">
-                <img src="" alt="Imagem  do produto">
+                <img src="../img/Logomarca_produto.png" alt="Logomarca">
+                <img src="../img/imagem_produto.png" alt="Imagem  do produto" >
                 <ul id="miniaturasImg">
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
+                    <li><img src="../img/miniatura_01.png" alt="Miniaturas do produto"></li>
+                    <li><img src="../img/miniatura_02.png" alt="Miniaturas do produto"></li>
+                    <li><img src="../img/miniatura_03.png" alt="Miniaturas do produto"></li>
+                    <li><img src="../img/miniatura_04.png" alt="Miniaturas do produto"></li>
                 </ul>
             </div>
             <article id="infoAcao">
                 <h1>Placa-mãe ASUS Pro WS TRX50-SAGE WIFI CEB Workstation</h1>
                 <p>
-                    ASUS Pro WS TRX50-SAGE WIFI recondicionado, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 3x M.2, 2,5 GbE, USB 3.2 Gen2, CEB <a href="#">MAIS INFORMAÇÕES</a>
+                    ASUS Pro WS TRX50-SAGE WIFI recondicionado, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 3x M.2, 2,5 GbE, USB 3.2 Gen2, CEB <a href="#" target="_self">MAIS INFORMAÇÕES</a>
                 </p>
                 <p>
                     Código de digitalização: <strong>LN159842</strong>   |   Código do fabricante: <strong>90MB1FZ0-MOEAY/refurb</strong>
                 </p>
                 <h2>R$ <strong>4.835,00</strong></h2>
-                <img src="" alt="Compartilhar">
-                <img src="" alt="Lista de desejos">
+                <img src="../img/Share.png" alt="Compartilhar" width="50px">
+                <img src="../img/Heart.png" alt="Lista de desejos">
                 <div id="compra">
                     <p>
-                        Peca nos proximos <strong>58mins</strong> e <strong>receba amanha</strong>
+                        Peca nos proximos <strong>58mins</strong> e <strong>receba amanhã</strong>
                     </p>
-                    <a href="#" id="botCompra">
+                    <a href="#" id="botCompra" target="_self">
                         COMPRAR AGORA
                     </a>
-                    <img src="" alt="Carrinhho">
-                    <p>Adcione ao carrinho</p>
+                    <p><img src="../img/Add_shopping_cart.png" alt="Carrinhho">Adcione ao carrinho</p>
                     <p id="Estado">Em estoque</p>
                 </div>
                 <div id="pagamento">
+                    <img src="../img/paypal_logo.png" alt="Logo PayPal" width="100px">
                     <p>
-                        Pague em 3 parcelassem juros de <strong>R$ 4.835,00 </strong>
-                    </p>
-                    <p>
-                        <a href="#">Mais informações</a>
-                    </p>
+                        Pague em 3 parcelassem juros de <strong>R$ 4.835,00 </strong><a href="#" target="_self">Mais informações</a>
+                    </p>                
                 </div>
                 <div id="contato">
-                    <img src="" alt="Icone de sino">
-                    <p><strong>Envie-me um e-mail</strong>quando a disponibilidade ou o preço mudar</p>
+                    <img src="../img/Notifications.png" alt="Icone de sino">
+                    <p><strong>Envie-me um e-mail</strong> quando a disponibilidade ou o preço mudar</p>
                 </div>
-                <!-- abas !!!!!!!!!!!!!!11 -->
-                
-                <img src="" alt="icone de 48hrs">
+                <details>
+                    <summary>Ver opçõe de entrega</summary>
+                    <h4>Entrega grátis</h4>
+                    <p>
+                        <strong>Entraga em até 5 dias úteis</strong> Para compras acima de 299,00
+                    </p>
+                    <hr>
+                    <h4>Entrega rápida / padrão</h4>
+                    <p>
+                        <strong>Entrega em até 7 dias úteis</strong> por R$ 14,90
+                    </p>
+                    <hr>
+                    <h4>Entrega Expressa</h4>
+                    <p><strong>Entrega em até 2 dias úteis</strong> por R$ 29,90</p>
+                </details>
+                <hr>
+                <details>
+                    <summary>Financie este produto</summary>
+                    <h3>À Vista: R$ 4.835,00 (no PIX com 5% de desconto = R$ 4.593,25)</h3>
+                    <h3>Ou em até 3x de R$ 1.611,67 (sem juros)</h3>
+                </details>
+                <hr>
                 <p>
+                    <img src="../img/KortexProtect.png" alt="Icone da logo KortexProtect" width="40px">
                     <strong>KORTEXPROTECT - </strong> Proteja contra danos de instalação por 28 dias. <a href="#">
-                        <img src="" alt="Icone de info">
+                        <img src="../img/Info.png" alt="Icone de info">
                     </a>
                 </p>
                 <p>
+                    <img src="../img/48h.png" alt="icone de 48hrs">
                     <strong>SUBSTITUIÇÃO EM 48 HORAS -</strong> Se você precisa devolver este item, seu produto de substituição será enviado em até 2 dias úteis após a chegada do produto à Kortex. <a href="#">
-                        <img src="" alt="Icone de info">
+                        <img src="../img/Info.png" alt="Icone de info">
                     </a>
                 </p>
             </article>
         </section>
         <section id="infoGeral">
-            <div id="secoes">
-                <ul>
-                    <li>Visão geral do produto</li>
-                    <li>Especificações</li>
-                    <li>Garantia</li>
-                    <li>Guia de Compras</li>
-                    <li>Avaliações</li>
-                    <li>Perguntas e respostar</li>
-                </ul>
-            </div>
-            <div id="info">
-                <h2>Visão geral do produto</h2>
-                <h3>Um paraíso de estações de trabalho</h3>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, nam quaerat. Voluptatem, corrupti ratione ducimus consequatur enim nihil soluta ut sunt nisi est praesentium, reprehenderit nulla libero omnis beatae dolorum? Temporibus maxime explicabo quaerat labore inventore fugit delectus sint repudiandae aut quo, nihil minus consectetur tenetur ea eum qui officiis placeat quisquam corrupti odit reprehenderit adipisci error asperiores? Dignissimos sit ex exercitationem sed. Blanditiis, velit cum dolor harum maiores veritatis quod recusandae totam inventore laborum dicta voluptatibus molestiae error asperiores?
-                </p>
-                <h3>Pronto para overclock de CPU e memória</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus expedita accusantium commodi vel ipsa reiciendis aspernatur voluptate perferendis neque adipisci odit pariatur minus, nostrum, quia excepturi. Omnis aspernatur vitae reiciendis, nulla iusto fugiat placeat error porro ad obcaecati deserunt. At obcaecati quaerat quis consequatur et soluta facilis inventore! Reprehenderit velit obcaecati facere inventore minima asperiores magni earum ex voluptatum qui id doloribus illum atque, deleniti rerum eos libero molestiae alias quia pariatur numquam iusto. Praesentium id nobis, obcaecati veritatis recusandae nulla eligendi ratione hic sint officiis incidunt consequuntur ipsum similique!
-                </p>
+            <div id="secoesInfo">
+                <details>
+                    <summary><strong>Visão geral do produto</strong></summary>
+                    <div class="info">
+                        <h2>Visão geral do produto</h2>
+                        <h3>Um paraíso de estações de trabalho</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, nam quaerat. Voluptatem, corrupti ratione ducimus consequatur enim nihil soluta ut sunt nisi est praesentium, reprehenderit nulla libero omnis beatae dolorum? Temporibus maxime explicabo quaerat labore inventore fugit delectus sint repudiandae aut quo, nihil minus consectetur tenetur ea eum qui officiis placeat quisquam corrupti odit reprehenderit adipisci error asperiores? Dignissimos sit ex exercitationem sed. Blanditiis, velit cum dolor harum maiores veritatis quod recusandae totam inventore laborum dicta voluptatibus molestiae error asperiores?
+                        </p>
+                        <h3>Pronto para overclock de CPU e memória</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus expedita accusantium commodi vel ipsa reiciendis aspernatur voluptate perferendis neque adipisci odit pariatur minus, nostrum, quia excepturi. Omnis aspernatur vitae reiciendis, nulla iusto fugiat placeat error porro ad obcaecati deserunt. At obcaecati quaerat quis consequatur et soluta facilis inventore! Reprehenderit velit obcaecati facere inventore minima asperiores magni earum ex voluptatum qui id doloribus illum atque, deleniti rerum eos libero molestiae alias quia pariatur numquam iusto. Praesentium id nobis, obcaecati veritatis recusandae nulla eligendi ratione hic sint officiis incidunt consequuntur ipsum similique!
+                        </p>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>Especificações</strong></summary>
+                    <div class="info">
+                        <table border="1px">
+                            <tbody>
+                                <tr><th colspan="2">Especificações Principais</th></tr>
+                                    <tr>
+                                        <td>Edição/Modelo</td>
+                                            <td>
+                                                    Pro WS TRX50-SAGE WIFI 
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Formato</td>
+                                            <td>
+                                                    CEB 
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Soquete da CPU</td>
+                                            <td>
+                                                    TR5 
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chipset</td>
+                                            <td>
+                                                    AMD TRX50 
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <table border="1px">
+                            <tbody>
+                                <tr><th colspan="2">Suporte à Memória RAM</th></tr>
+                                    <tr>
+                                        <td>Tipo de Memória</td>
+                                            <td>
+                                                    DDR5 
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Canais de Memória</td>
+                                            <td>
+                                                    Dual (2) 
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Memória ECC</td>
+                                            <td>
+                                                    ECC 
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tipo de Memória (R/U)</td>
+                                            <td>
+                                                    &nbsp;
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Velocidade da Memória (MHz)</td>
+                                            <td>
+                                                    &nbsp;
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Capacidade Máxima de Memória</td>
+                                            <td>
+                                                    &nbsp;
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <table border="1px">
+                            <tbody>
+                                <tr><th colspan="2">Áudio</th></tr>
+                                    <tr>
+                                        <td>Áudio</td>
+                                            <td>
+                                                    Áudio HD 7.1 Canais 
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <table border="1px">
+                            <tbody>
+                                <tr><th colspan="2">Suporte a Vídeo</th></tr>
+                                    <tr>
+                                        <td>Interface Primária da GPU</td>
+                                            <td>
+                                                    PCIe 5.0 (x16) 
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suporte a NVIDIA SLI</td>
+                                            <td>
+                                                    N/A (Não Suportado)
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suporte a AMD CrossFire</td>
+                                            <td>
+                                                    N/A (Não Suportado)
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vídeo Integrado</td>
+                                            <td>
+                                                    &nbsp;
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Conectores de Vídeo On-Board</td>
+                                            <td>
+                                                    Nenhum
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <table border="1px">
+                            <tbody>
+                                <tr><th colspan="2">Conectividade Interna</th></tr>
+                                    <tr>
+                                        <td>Slots de Expansão</td>
+                                            <td>
+                                                    <ul>
+                                                            <li>2 x M.2, 22-42/60/80, PCIe Gen5 x4</li>
+                                                            <li>1 x M.2, 22-80, PCIe Gen4x4</li>
+                                                            <li>1 x PCIe 4.0 x16</li>
+                                                            <li>1 x PCIe 4.0 x16 (Largura de banda x4)</li>
+                                                            <li>2 x PCIe 5.0 x16</li>
+                                                            <li>1 x PCIe 5.0 x16 (Largura de banda x8)</li>
+                                                            <li>4 x SATA 6GB/s</li>
+                                                    </ul>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suporte SATA</td>
+                                            <td>
+                                                    SATA3 
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suporte a RAID via</td>
+                                            <td>
+                                                    &nbsp;
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Modos de Armazenamento Suportados</td>
+                                            <td>
+                                                    &nbsp;
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>E/S Interno</td>
+                                            <td>
+                                                    <ul>
+                                                            <li>2 x Conector de 24 pinos (Energia)</li>
+                                                            <li>1 x Conector do Cooler da CPU de 4 pinos</li>
+                                                            <li>1 x Conector do Cooler OPT da CPU de 4 pinos</li>
+                                                            <li>1 x Conector de 6 pinos (Energia)</li>
+                                                            <li>2 x Conector de 8 pinos (Energia)</li>
+                                                            <li>3 x Conector PCIe de 8 pinos (Energia)</li>
+                                                            <li>1 x Conector de intrusão do chassi</li>
+                                                            <li>1 x Botão FlexKey</li>
+                                                            <li>1 x Header de Áudio Front Panel</li>
+                                                            <li>1 x Jumper(s) do Modo LN2</li>
+                                                            <li>3 x Conectores M.2</li>
+                                                            <li>1 x Botão ReTry (Tentar Novamente)</li>
+                                                            <li>1 x Botão Safe Boot (Inicialização Segura)</li>
+                                                            <li>1 x Header Serial (COM)</li>
+                                                            <li>1 x Conector SlimSAS</li>
+                                                            <li>4 x Header do Cooler do Sistema</li>
+                                                            <li>1 x Conector do painel do sistema</li>
+                                                            <li>1 x Header do Sensor Térmico</li>
+                                                            <li>1 x Header TPM (SPI_TPM)</li>
+                                                            <li>5 x Header USB</li>
+                                                            <li>1 x Conector da Bomba de Água+ (4-Pinos)</li>
+                                                    </ul>
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <table border="1px">
+                            <tbody>
+                                <tr><th colspan="2">Conectividade Externa</th></tr>
+                                    <tr>
+                                        <td>Tipo de Interface de Rede</td>
+                                            <td>
+                                                    <ul>
+                                                            <li>LAN 802.11be Wi-Fi 7</li>
+                                                            <li>LAN com fio 10G</li>
+                                                            <li>LAN com fio 2.5 Gigabit</li>
+                                                    </ul>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Módulos/Chips de Rede</td>
+                                            <td>
+                                                    &nbsp;
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Conectores Traseiros de E/S</td>
+                                            <td>
+                                                    <ul>
+                                                            <li>1 x Botão BIOS Flashback</li>
+                                                            <li>1 x Botão Clear CMOS (Limpar CMOS)</li>
+                                                            <li>2 x RJ-45</li>
+                                                            <li>1 x Saída S/PDIF (Óptica)</li>
+                                                            <li>8 x USB</li>
+                                                            <li>1 x USB Type-C</li>
+                                                            <li>1 x Módulo WiFi</li>
+                                                    </ul>
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <table border="1px">
+                            <tbody>
+                                <tr><th colspan="2">Especificações Adicionais</th></tr>
+                                    <tr>
+                                        <td>Refrigeração a Água</td>
+                                            <td>
+                                                    <span class="no">Não</span>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Refrigeração</td>
+                                            <td>
+                                                    Dissipadores Passivos 
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Velocidade QPI</td>
+                                            <td>
+                                                    N/A (Não Aplicável)
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dimensões da Placa</td>
+                                            <td>
+                                                    305 x 280 mm
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Observação</td>
+                                            <td>
+                                                    &nbsp;
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <table border="1px">
+                            <tbody>
+                                <tr><th colspan="2">Informações Adicionais</th></tr>
+                                    <tr>
+                                        <td>Código de Scan</td>
+                                            <td>
+                                                    LN144643
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Número do Modelo</td>
+                                            <td>
+                                                    90MB1FZ0-M0EAY0
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GTIN</td>
+                                            <td>
+                                                    4711387402726
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>Garantia</strong></summary>
+                    <div class="info">
+                        <article>
+                            <h2>Detalhes</h2>
+                            <hr>
+                            <h4>Duração:</h4>
+                            <p>36 meses</p>
+                            <h4>Tipo:</h4>
+                            <p>Restorno a loja</p>
+                            <h4>Períiodo</h4>
+                            <p>28 dias</p>
+                        </article>
+                        <article>
+                            <h4>Fabricante:</h4>
+                            <p>ASUS</p>
+                            <h4>Telefone:</h4>
+                            <p>(99)9999-9999</p>
+                        </article>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>Guia de Compras</strong></summary>
+                    <div class="info">
+                        <img src="" alt="Livro de guia">
+                        <p>Precisa de ajuda para escolher a placa certa? Leia nosso</p>
+                        <a href="#" target="_self">Guia de compras de placa-mãe AMD</a>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>Avaliações</strong></summary>
+                    <div class="info">
+                        <h3>Avaliações</h3>
+                        <ul>
+                            <li>
+                                <a href="#" target="_self">
+                                    <img src="../img/Star.png" alt="Estrelas">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self">
+                                    <img src="../img/Star.png" alt="Estrelas">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self">
+                                    <img src="../img/Star.png" alt="Estrelas">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self">
+                                    <img src="../img/Star.png" alt="Estrelas">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self">
+                                    <img src="../img/Star.png" alt="Estrelas">
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" target="_self">Seja o primeiro a avaliar este produto</a>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>Perguntas e respostar</strong></summary>
+                    <div class="info">
+                        <h3>Questões</h3>
+                        <a href="#" target="_self">Faça uma pergunta</a>
+                        <div class="coment">
+                            <p class="nomeComent">Blizzard1</p>
+                            <p>4 meses atrás</p>
+                            <p class="textComent">
+                                Eles definitivamente entrarão em estoque no dia 19 de maio?? porque queremos encomendá-los ao mesmo tempo que um processador AMD Threadripper 7980x
+                            </p>
+                            <a href="#" target="_self">Responda a esta pesgunta</a>
+                            <div class="resp">
+                                <p class="nomeComent">Tyler M</p>
+                                <p>4 meses atrás</p>
+                                <p class="textComent">
+                                    Obrigado pela sua pergunta.
+
+                                    Entre em contato com nossa equipe de vendas pelo telefone 01204 474747 ou pelo chat ao vivo em nosso site para que possamos ajudar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
             </div>
         </section>
     </main>
     <footer>
-        <img src="" alt="Logomarca">
+        <img src="../img/logo_kortex_footer_titulo.png" alt="Logomarca" width="200px">
         <div id="logoSocial">
-            <img src="" alt="Logo">
+            <img src="../img/logo_kortex_esquerda_footer.png" alt="Logo" width="300px">
             <ul>    <!--Lista de links de midias sociais-->
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="../img/Icone_facebook.png" alt="" width="2%">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://x.com/" target="_blank">
+                        <img src="../img/Icone_x.png" alt="" width="2%">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="../img/Icone_linkedin.png" alt="" width="2%">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="../img/Icone_youtube.png" alt="" width="2%">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../img/Icone_instagram.png" alt="" width="2%">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="" alt="">
+                    <a href="https://discord.com/" target="_blank">
+                        <img src="../img/Icone_discord.png" alt="" width="2%">
                     </a>
                 </li>
                 
@@ -192,48 +584,25 @@
                 <h4></h4>
                 <ul>
                     <li>
-                        <a href="#"> Sobre nós </a>
+                        <a href="#" target="_self"> Sobre nós </a>
                     </li>
                     <li>
-                        <a href="#"> Programa de Afiliados </a>
+                        <a href="#" target="_self"> Programa de Afiliados </a>
                     </li>
                     <li>
-                        <a href="#"> Carreiras </a>
+                        <a href="#" target="_self"> Carreiras </a>
                     </li>
                     <li>
-                        <a href="#"> Privacidade e Cookies </a>
+                        <a href="#" target="_self"> Privacidade e Cookies </a>
                     </li>
                     <li>
-                        <a href="#"> Termos e condções </a>
+                        <a href="#" target="_self"> Termos e condções </a>
                     </li>
                     <li>
-                        <a href="#"> Mapa do site </a>
+                        <a href="#" target="_self"> Mapa do site </a>
                     </li>
                     <li>
-                        <a href="#"> Plano de Redução de Carbono </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="infoSec">
-                <h4></h4>
-                <ul>
-                    <li>
-                        <a href="#"> Conecte-se </a>
-                    </li>
-                    <li>
-                        <a href="#"> Criar uma conta </a>
-                    </li>
-                    <li>
-                        <a href="#"> Visão geral da conta </a>
-                    </li>
-                    <li>
-                        <a href="#"> Produtos de Destaque </a>
-                    </li>
-                    <li>
-                        <a href="#"> Histórico de pedidos </a>
-                    </li>
-                    <li>
-                        <a href="#"> Lista de desejos </a>
+                        <a href="#" target="_blank"> Plano de Redução de Carbono </a>
                     </li>
                 </ul>
             </div>
@@ -241,22 +610,22 @@
                 <h4></h4>
                 <ul>
                     <li>
-                        <a href="#"> Suporte 3XK </a>
+                        <a href="#" target="_self"> Conecte-se </a>
                     </li>
                     <li>
-                        <a href="#"> Avaliações de clientes </a>
+                        <a href="#" target="_self"> Criar uma conta </a>
                     </li>
                     <li>
-                        <a href="#"> Central de Ajuda </a>
+                        <a href="#" target="_self"> Visão geral da conta </a>
                     </li>
                     <li>
-                        <a href="#"> Devoluções </a>
+                        <a href="#" target="_self"> Produtos de Destaque </a>
                     </li>
                     <li>
-                        <a href="#"> Vendas </a>
+                        <a href="#" target="_self"> Histórico de pedidos </a>
                     </li>
                     <li>
-                        <a href="#"> Suporte técnico </a>
+                        <a href="#" target="_self"> Lista de desejos </a>
                     </li>
                 </ul>
             </div>
@@ -264,19 +633,42 @@
                 <h4></h4>
                 <ul>
                     <li>
-                        <a href="#"> Subistituição em 48 horas </a>
+                        <a href="#" target="_self"> Suporte 3XK </a>
                     </li>
                     <li>
-                        <a href="#"> Contas Gerenciadas do Setor Público/Empresarial </a>
+                        <a href="#" target="_self"> Avaliações de clientes </a>
                     </li>
                     <li>
-                        <a href="#"> Digitalizar Finanças </a>
+                        <a href="#" target="_self"> Central de Ajuda </a>
                     </li>
                     <li>
-                        <a href="#"> Créditos PayPal </a>
+                        <a href="#" target="_self"> Devoluções </a>
                     </li>
                     <li>
-                        <a href="#"> KortexProtect </a>
+                        <a href="#" target="_self"> Vendas </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self"> Suporte técnico </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="infoSec">
+                <h4></h4>
+                <ul>
+                    <li>
+                        <a href="#" target="_self"> Subistituição em 48 horas </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self"> Contas Gerenciadas do Setor Público/Empresarial </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self"> Digitalizar Finanças </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"> Créditos PayPal </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self"> KortexProtect </a>
                     </li>
                 </ul>
             </div>
