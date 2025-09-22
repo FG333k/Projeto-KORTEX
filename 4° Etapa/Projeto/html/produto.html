@@ -7,17 +7,22 @@
 </head>
 <body>
     <header>
-        <div id="cabPrinc">
-            <a href="index.html" target="_self">    <!--Link para area de sobre do site-->
+        <div id="cabPrinc">     <!--Parte superior do cabeçalho-->
+            <a href="index.html" target="_self">    <!--Link para o home do site-->
                 <img src="../img/Kortex_logomarca.png" alt="logo - KORTEX" width="250px">
             </a>
+
+            <!-- Áreade pesquisa -->
             <form action="" method="post">
-                <input type="text" name="" id="" size="60px">   <!--Barra de pesquisa-->
-                <!--<input type="submit" name="pesquisar">-->  <!--Botão de enviar-->
-                <a href="pesquisa.html" target="_self">
+                <input type="text" name="" id="" size="60px">       <!--Barra de pesquisa-->
+                <!--<input type="submit" name="pesquisar">-->  <!--Botão de envio-->
+
+                <a href="pesquisa.html" target="_self">     <!--Botão de envio provisorio a nível de exibição-->
                     <img src="../img/Lupa.png" alt="pesquisar" width="30">
                 </a>
             </form>
+
+            <!-- Opções de coneção / cadastro -->
             <ul id="conect">
                 <li>
                     <a href="#" target="_self">LOGIN</a>
@@ -27,10 +32,11 @@
                 </li>
             </ul>
         </div>
-        <div id="cabSec">   <!--Menu principal do site-->
-            <ul id="menu">
+
+        <div id="cabSec">   <!--Parte inferior do cabeçalho-->
+            <ul id="menu">      <!--Menu principal do site-->
                 <li>
-                    <select name="categoria" id="">
+                    <select name="categoria" id="">     <!--Submenu de categorias-->
                         <option value="0" selected>CATEGORIA</option>
                         <option value="">Hardware & Componentes</option>
                         <option value="">Computadores e Notebooks</option>
@@ -45,6 +51,7 @@
                 <li>REDES</li>
                 <li>EMBARCADOS</li>
             </ul>
+
             <ul id="tools">     <!--Area de opções [montar PC, carrinho, lista de desejos]-->
                 <li>
                     <a href="#" target="_self">
@@ -65,7 +72,7 @@
         </div>
     </header>
     <main>
-        <div id="mapBordo">
+        <div id="mapBordo">     <!--Mapa de paginas para que o usuário se localize-->
             <a href="index.html" target="_self">
                 <img src="../img/logo_kortex_pequena.png" alt="Logo KORTEX" width="25px">
             </a>
@@ -78,7 +85,8 @@
             >
             <a href="#">ASUS Pro WS TRX50-SAGE WIFI</a>
         </div>
-        <section id="produto">
+
+        <section id="produto">  <!--Seção de infomrações iniciais do produto-->
             <div id="imagens">
                 <img src="../img/Logomarca_produto.png" alt="Logomarca">
                 <img src="../img/imagem_produto.png" alt="Imagem  do produto" >
@@ -89,7 +97,8 @@
                     <li><img src="../img/miniatura_04.png" alt="Miniaturas do produto"></li>
                 </ul>
             </div>
-            <article id="infoAcao">
+
+            <article id="infoAcao">     <!--Área de nome e opções de escolha do usuário-->
                 <h1>Placa-mãe ASUS Pro WS TRX50-SAGE WIFI CEB Workstation</h1>
                 <p>
                     ASUS Pro WS TRX50-SAGE WIFI recondicionado, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 3x M.2, 2,5 GbE, USB 3.2 Gen2, CEB <a href="#" target="_self">MAIS INFORMAÇÕES</a>
@@ -98,16 +107,19 @@
                     Código de digitalização: <strong>LN159842</strong>   |   Código do fabricante: <strong>90MB1FZ0-MOEAY/refurb</strong>
                 </p>
                 <h2>R$ <strong>4.835,00</strong></h2>
+
+                <!-- Botões de ação para compartilhar ou adcionar a lista de desejos -->
                 <img src="../img/Share.png" alt="Compartilhar" width="50px">
                 <img src="../img/Heart.png" alt="Lista de desejos">
-                <div id="compra">
+
+                <div id="compra">       <!--Área da opção de compra-->
                     <p>
                         Peca nos proximos <strong>58mins</strong> e <strong>receba amanhã</strong>
                     </p>
                     <a href="#" id="botCompra" target="_self">
                         COMPRAR AGORA
                     </a>
-                    <p><img src="../img/Add_shopping_cart.png" alt="Carrinhho">Adcione ao carrinho</p>
+                    <p><img src="../img/Add_shopping_cart.png" alt="Carrinhho">Adcione ao carrinho</p>  <!--Opção de adcionar ao carrinho de compras-->
                     <p id="Estado">Em estoque</p>
                 </div>
                 <div id="pagamento">
@@ -116,11 +128,13 @@
                         Pague em 3 parcelassem juros de <strong>R$ 4.835,00 </strong><a href="#" target="_self">Mais informações</a>
                     </p>                
                 </div>
-                <div id="contato">
+
+                <div id="contato">      <!--Opção de contato para atualização do estado do produto-->
                     <img src="../img/Notifications.png" alt="Icone de sino">
                     <p><strong>Envie-me um e-mail</strong> quando a disponibilidade ou o preço mudar</p>
                 </div>
-                <details>
+
+                <details>   <!--Opções de entrega-->
                     <summary>Ver opçõe de entrega</summary>
                     <h4>Entrega grátis</h4>
                     <p>
@@ -136,19 +150,21 @@
                     <p><strong>Entrega em até 2 dias úteis</strong> por R$ 29,90</p>
                 </details>
                 <hr>
-                <details>
+                
+                <details>   <!--Opções de financiamento / parcelamento-->
                     <summary>Financie este produto</summary>
                     <h3>À Vista: R$ 4.835,00 (no PIX com 5% de desconto = R$ 4.593,25)</h3>
                     <h3>Ou em até 3x de R$ 1.611,67 (sem juros)</h3>
                 </details>
                 <hr>
-                <p>
+                
+                <p>         <!--Segurança da loja-->
                     <img src="../img/KortexProtect.png" alt="Icone da logo KortexProtect" width="40px">
                     <strong>KORTEXPROTECT - </strong> Proteja contra danos de instalação por 28 dias. <a href="#">
                         <img src="../img/Info.png" alt="Icone de info">
                     </a>
                 </p>
-                <p>
+                <p>         <!--Sistema de devolução da loja-->
                     <img src="../img/48h.png" alt="icone de 48hrs">
                     <strong>SUBSTITUIÇÃO EM 48 HORAS -</strong> Se você precisa devolver este item, seu produto de substituição será enviado em até 2 dias úteis após a chegada do produto à Kortex. <a href="#">
                         <img src="../img/Info.png" alt="Icone de info">
@@ -156,23 +172,27 @@
                 </p>
             </article>
         </section>
-        <section id="infoGeral">
+        <section id="infoGeral">    <!--Seções de informações do produto-->
             <div id="secoesInfo">
-                <details>
+                <details>   <!--Visão geral do produto-->
                     <summary><strong>Visão geral do produto</strong></summary>
                     <div class="info">
                         <h2>Visão geral do produto</h2>
                         <h3>Um paraíso de estações de trabalho</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, nam quaerat. Voluptatem, corrupti ratione ducimus consequatur enim nihil soluta ut sunt nisi est praesentium, reprehenderit nulla libero omnis beatae dolorum? Temporibus maxime explicabo quaerat labore inventore fugit delectus sint repudiandae aut quo, nihil minus consectetur tenetur ea eum qui officiis placeat quisquam corrupti odit reprehenderit adipisci error asperiores? Dignissimos sit ex exercitationem sed. Blanditiis, velit cum dolor harum maiores veritatis quod recusandae totam inventore laborum dicta voluptatibus molestiae error asperiores?
+                            A placa-mãe Pro WS TRX50-SAGE WIFI oferece velocidade, compatibilidade e estabilidade de elite, ideais para criação de conteúdo, desenvolvimento de software, aprendizado de máquina e muito mais. Trinta e seis estágios de energia alimentam os processadores AMD Ryzen Threadripper™ PRO 7000 WX-series e AMD Ryzen Threadripper™ 7000 com até 96 núcleos, além de suportar até 1 TB de módulos R-DIMM DDR5, proporcionando o potencial de desempenho que os profissionais precisam para aplicações de ponta. <br>
+                            Com conectores de energia PCIe® integrados que oferecem suporte adicional para múltiplas placas gráficas, resfriamento ativo e heat pipes nos dissipadores de calor do VRM, WiFi 7, porta USB de 20 Gbps, suporte a SlimSAS e IMPI, a Pro WS TRX50-SAGE WIFI vem preparada para uma ampla gama de cenários e setores.
                         </p>
                         <h3>Pronto para overclock de CPU e memória</h3>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus expedita accusantium commodi vel ipsa reiciendis aspernatur voluptate perferendis neque adipisci odit pariatur minus, nostrum, quia excepturi. Omnis aspernatur vitae reiciendis, nulla iusto fugiat placeat error porro ad obcaecati deserunt. At obcaecati quaerat quis consequatur et soluta facilis inventore! Reprehenderit velit obcaecati facere inventore minima asperiores magni earum ex voluptatum qui id doloribus illum atque, deleniti rerum eos libero molestiae alias quia pariatur numquam iusto. Praesentium id nobis, obcaecati veritatis recusandae nulla eligendi ratione hic sint officiis incidunt consequuntur ipsum similique!
+                            Para estações de trabalho da série AMD TR5 e modelos de desktop de ponta (HEDT), a AMD oferece opções de overclocking de CPU e DRAM. Para aproveitar ao máximo o desempenho desses processadores, a ASUS incorporou um design inovador de fonte de alimentação dupla na placa-mãe Pro WS TRX50-SAGE WIFI. Juntamente com o fornecimento de energia robusto e módulos de resfriamento avançados, esta placa-mãe apresenta estabilidade notável durante o overclocking. Switches de hardware e opções de BIOS otimizadas na placa-mãe proporcionam aos entusiastas de overclocking maior conveniência ao levar seus sistemas ao limite. Você pode aumentar ainda mais o desempenho da sua memória habilitando as configurações EXPO. A sinergia abrangente da EXPO e do ECC R-DIMM combina desempenho excepcional com estabilidade excepcional, estabelecendo um novo padrão para estações de trabalho e computação de desktop de ponta.
                         </p>
+                        <!--
+                            MAIS INFORAÇÕES
+                        -->
                     </div>
                 </details>
-                <details>
+                <details>   <!--Espeificações-->
                     <summary><strong>Especificações</strong></summary>
                     <div class="info">
                         <table border="1px">
@@ -451,7 +471,7 @@
                         </table>
                     </div>
                 </details>
-                <details>
+                <details>   <!--Garantia-->
                     <summary><strong>Garantia</strong></summary>
                     <div class="info">
                         <article>
@@ -472,7 +492,7 @@
                         </article>
                     </div>
                 </details>
-                <details>
+                <details>   <!--Guia de compras-->
                     <summary><strong>Guia de Compras</strong></summary>
                     <div class="info">
                         <img src="" alt="Livro de guia">
@@ -480,7 +500,7 @@
                         <a href="#" target="_self">Guia de compras de placa-mãe AMD</a>
                     </div>
                 </details>
-                <details>
+                <details>   <!--Avaliações-->
                     <summary><strong>Avaliações</strong></summary>
                     <div class="info">
                         <h3>Avaliações</h3>
@@ -514,7 +534,7 @@
                         <a href="#" target="_self">Seja o primeiro a avaliar este produto</a>
                     </div>
                 </details>
-                <details>
+                <details>   <!--Perguntas e respostas-->
                     <summary><strong>Perguntas e respostar</strong></summary>
                     <div class="info">
                         <h3>Questões</h3>
@@ -542,9 +562,12 @@
         </section>
     </main>
     <footer>
-        <img src="../img/logo_kortex_footer_titulo.png" alt="Logomarca" width="200px">
+        <a href="index.html" target="_self">
+            <img src="../img/logo_kortex_footer_titulo.png" alt="Logomarca" width="200px">  <!--Imagem no topo centro-->
+        </a>
         <div id="logoSocial">
-            <img src="../img/logo_kortex_esquerda_footer.png" alt="Logo" width="300px">
+            <img src="../img/logo_kortex_esquerda_footer.png" alt="Logo" width="300px">     <!--Imagem na lado esquerdo-->
+
             <ul>    <!--Lista de links de midias sociais-->
                 <li>
                     <a href="https://www.facebook.com/" target="_blank">
@@ -576,13 +599,14 @@
                         <img src="../img/Icone_discord.png" alt="" width="2%">
                     </a>
                 </li>
-                
             </ul>
         </div>
-        <div id="info">
+
+        <div id="info">     <!--Seção de informações adcionais-->
             <div class="infoSec">
-                <h4></h4>
-                <ul>
+                <h4>INFORMAÇÕES</h4>    <!--Titulo de cada subseção-->
+
+                <ul>    <!--Lista de links para as opções-->
                     <li>
                         <a href="#" target="_self"> Sobre nós </a>
                     </li>
@@ -607,7 +631,7 @@
                 </ul>
             </div>
             <div class="infoSec">
-                <h4></h4>
+                <h4>MINHA CONTA</h4>
                 <ul>
                     <li>
                         <a href="#" target="_self"> Conecte-se </a>
@@ -630,7 +654,7 @@
                 </ul>
             </div>
             <div class="infoSec">
-                <h4></h4>
+                <h4>APOIO</h4>
                 <ul>
                     <li>
                         <a href="#" target="_self"> Suporte 3XK </a>
@@ -653,7 +677,7 @@
                 </ul>
             </div>
             <div class="infoSec">
-                <h4></h4>
+                <h4>SERVIÇOS</h4>
                 <ul>
                     <li>
                         <a href="#" target="_self"> Subistituição em 48 horas </a>

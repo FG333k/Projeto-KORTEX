@@ -7,17 +7,22 @@
 </head>
 <body>
     <header>
-        <div id="cabPrinc">
-            <a href="index.html" target="_self">    <!--Link para area de sobre do site-->
+        <div id="cabPrinc">     <!--Parte superior do cabeçalho-->
+            <a href="index.html" target="_self">    <!--Link para o home do site-->
                 <img src="../img/Kortex_logomarca.png" alt="logo - KORTEX" width="250px">
             </a>
+
+            <!-- Áreade pesquisa -->
             <form action="" method="post">
-                <input type="text" name="" id="" size="60px">   <!--Barra de pesquisa-->
-                <!--<input type="submit" name="pesquisar">-->  <!--Botão de enviar-->
-                <a href="pesquisa.html" target="_self">
+                <input type="text" name="" id="" size="60px">       <!--Barra de pesquisa-->
+                <!--<input type="submit" name="pesquisar">-->  <!--Botão de envio-->
+
+                <a href="pesquisa.html" target="_self">     <!--Botão de envio provisorio a nível de exibição-->
                     <img src="../img/Lupa.png" alt="pesquisar" width="30">
                 </a>
             </form>
+
+            <!-- Opções de coneção / cadastro -->
             <ul id="conect">
                 <li>
                     <a href="#" target="_self">LOGIN</a>
@@ -27,10 +32,11 @@
                 </li>
             </ul>
         </div>
-        <div id="cabSec">   <!--Menu principal do site-->
-            <ul id="menu">
+
+        <div id="cabSec">   <!--Parte inferior do cabeçalho-->
+            <ul id="menu">      <!--Menu principal do site-->
                 <li>
-                    <select name="categoria" id="">
+                    <select name="categoria" id="">     <!--Submenu de categorias-->
                         <option value="0" selected>CATEGORIA</option>
                         <option value="">Hardware & Componentes</option>
                         <option value="">Computadores e Notebooks</option>
@@ -45,6 +51,7 @@
                 <li>REDES</li>
                 <li>EMBARCADOS</li>
             </ul>
+
             <ul id="tools">     <!--Area de opções [montar PC, carrinho, lista de desejos]-->
                 <li>
                     <a href="#" target="_self">
@@ -65,7 +72,7 @@
         </div>
     </header>
     <main>
-        <div id="mapBordo">
+        <div id="mapBordo">     <!--Mapa de paginas para que o usuário se localize-->
             <a href="index.html" target="_self">
                 <img src="../img/logo_kortex_pequena.png" alt="Logo KORTEX" width="25px">
             </a>
@@ -74,24 +81,31 @@
             >
             <a href="index.html" target="_self">Placas-mãe - AMD</a>
         </div>
-        <section id="ADS">
+
+        <section id="ADS">      <!--Seção de anucios initernos do site-->
             <img src="../img/Imagem_ads.png" alt="ADS - foto" width="30%">
             <h3>O futuro é agora e é Ryzen</h3>
-            <p>Fiqe á frente com um desempenho que só melhora</p>
+            <p>Fique á frente com um desempenho que só melhora</p>
             <a href="#" target="_self">Saiba mais</a>
             <img src="../img/logo_ads.png
             " alt="logo ADS">
         </section>
-        <section id="titulo">
-            <h1>Placas-mãe - AMD</h1>
-            <a href="#" target="_self">Ler mais</a>
-            <p>
-                Precisa de ajuda para escolher a placa certa? Leia nosso
-            </p>
-            <a href="#" target="_self">Guia de compra de placas-mãe AMD</a>
+
+        <section id="titulo">        <!--Título da pagina-->
+            <div id="tituloEsq">
+                <h1>Placas-mãe - AMD</h1>   <!--Título-->
+                <a href="#" target="_self">Ler mais</a>
+            </div>
+            <div id="tituloDir">
+                <p>
+                    Precisa de ajuda para escolher a placa certa? Leia nosso
+                </p>
+                <a href="#" target="_self">Guia de compra de placas-mãe AMD</a>
+            </div>
         </section>
-        <section id="galeriaProdutos">
-            <article id="filtro">
+
+        <section id="galeriaProdutos">      <!--Área de exibição dos produtos e do filtro-->
+            <article id="filtro">   <!--Filtro localizado a esquerda da página-->
                 <form action="" method="post">
                     <h3>Agrupar por categoria</h3>
                     <!--BOTÃO-->
@@ -104,7 +118,7 @@
                     <input type="checkbox" name="Fabricante" id=""> ASRock
                     <input type="checkbox" name="Fabricante" id=""> NZXT
                     <hr>
-                    <h3>Dispoibilidade</h3>
+                    <h3>Disponibilidade</h3>
                     <hr>
                     <input type="checkbox" name="Dispoibilidade" id=""> Venda 
                     <input type="checkbox" name="Dispoibilidade" id=""> Quente
@@ -123,11 +137,12 @@
                     -->
 
                 </form>
-                
             </article>
-            <article id="anuncioProduto">
+
+            <article id="anuncioProduto">       <!--Área de exibição dos produtos de acordo com o filtro-->
                 <a href="produto.html" class="infoProduto" target="_self">     <!--Link que direciona as informações do produto-->
-                    <div class="produtoHorisontal">
+
+                    <div class="produtoHorisontal">     <!--Area de informações da esquerda-->
                         <div class="esquerda">
                             <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
                             <p>Novo</p>     <!--Aviso-->
@@ -135,7 +150,8 @@
                             <a href="#" target="_self">NN162612</a>    <!--Cod produto-->
                             <p><img src="../img/48h.png" alt="Icone de 48horas" width="40px">Subistituição</p>
                         </div>
-                        <div class="direita">
+
+                        <div class="direita">           <!--Area de informações da esquerda-->
                             <a href="#" target="_self">
                                 <img src="../img/Heart.png" alt="Lista de desejos" width="25px">
                             </a>
@@ -156,9 +172,12 @@
         </section>
     </main>
     <footer>
-        <img src="../img/logo_kortex_footer_titulo.png" alt="Logomarca" width="200px">
+        <a href="index.html" target="_self">
+            <img src="../img/logo_kortex_footer_titulo.png" alt="Logomarca" width="200px">  <!--Imagem no topo centro-->
+        </a>
         <div id="logoSocial">
-            <img src="../img/logo_kortex_esquerda_footer.png" alt="Logo" width="300px">
+            <img src="../img/logo_kortex_esquerda_footer.png" alt="Logo" width="300px">     <!--Imagem na lado esquerdo-->
+
             <ul>    <!--Lista de links de midias sociais-->
                 <li>
                     <a href="https://www.facebook.com/" target="_blank">
@@ -190,13 +209,14 @@
                         <img src="../img/Icone_discord.png" alt="" width="2%">
                     </a>
                 </li>
-                
             </ul>
         </div>
-        <div id="info">
+
+        <div id="info">     <!--Seção de informações adcionais-->
             <div class="infoSec">
-                <h4></h4>
-                <ul>
+                <h4>INFORMAÇÕES</h4>    <!--Titulo de cada subseção-->
+
+                <ul>    <!--Lista de links para as opções-->
                     <li>
                         <a href="#" target="_self"> Sobre nós </a>
                     </li>
@@ -221,7 +241,7 @@
                 </ul>
             </div>
             <div class="infoSec">
-                <h4></h4>
+                <h4>MINHA CONTA</h4>
                 <ul>
                     <li>
                         <a href="#" target="_self"> Conecte-se </a>
@@ -244,7 +264,7 @@
                 </ul>
             </div>
             <div class="infoSec">
-                <h4></h4>
+                <h4>APOIO</h4>
                 <ul>
                     <li>
                         <a href="#" target="_self"> Suporte 3XK </a>
@@ -267,7 +287,7 @@
                 </ul>
             </div>
             <div class="infoSec">
-                <h4></h4>
+                <h4>SERVIÇOS</h4>
                 <ul>
                     <li>
                         <a href="#" target="_self"> Subistituição em 48 horas </a>
