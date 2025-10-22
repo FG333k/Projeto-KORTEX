@@ -1,0 +1,234 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* HEADER DA PÁGINA */
+
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #D9D9D9;
+
+    /* Cabeçalho principal */
+    #cabPrinc{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        /* Logo principal */
+        #logoCabe{
+
+            img{
+                min-width: 100px;
+            }
+        }
+        
+        /* Area de pesquisa */
+        form{
+            width: 120dvh;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
+            /* Campo de texto */
+            #campoPesquisa{
+                display: inline-block;
+                min-width: 90%;
+                height: 30px;
+                border: none;
+                border-radius: 50px;
+                translate: 0px -2px;
+            }
+
+            /* Icone de lupa / botão de pesquisa */
+            a{
+                height: 30px;
+
+                img{
+                    margin: 0px 20px 0px 2px;
+                    width: 25px;
+                }
+            }
+        }
+
+        /* Oopções de conexao */
+        ul{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            width: 200px;
+
+            li{
+                display: inline;
+                margin: 0px 15px;
+                font-weight: 800;
+
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+                a:hover{
+                    text-decoration: overline;
+                    text-decoration-color: #2642c0;
+                    text-decoration-thickness: 2.5px;
+                }
+            }
+        }
+    }
+
+    /* Cabeçalho secundário */
+    #cabSec{
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        background-color: #FFFFFF;
+
+        #menu{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
+            li{
+                list-style-type: none;
+                margin: 0px 10px;
+
+                /* Sub-menu */
+                select{
+                    height: 29px;
+                    margin-right: 25px;
+                    
+                    text-align: center;
+                    font-weight: 800;
+                    border-style: none;
+                    border-right: 1px solid black;
+                }
+
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+                a:hover{
+                    text-decoration: overline;
+                    text-decoration-thickness: 2px;
+                    text-decoration-color: #2642c0;
+                }
+
+            }
+        }
+
+        /* Ferramentas do site */
+        #tools{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
+            li{
+                list-style-type: none;
+                margin: 0px 10px;
+
+                a:hover{
+                    
+                    img{
+                        border-bottom: 2px solid black
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Footer do site */
+footer{
+    background-color: #131C44;
+    font-family: Arial, Helvetica, sans-serif;
+
+    #logoPrinc{
+        display: block;
+        width: 200px;
+        margin: 0px auto;
+        padding: 20px 0px ;
+    }
+
+    #bigBox{
+        padding: 30px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        /* Lado esquerdo do footer */
+        #logoSocial{
+            width: 30vh;
+            margin-left: 62px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+
+            img{
+                width: 250px;
+            }
+
+            ul{
+                display: flex;
+                width: 250px;
+                margin-top: 20px;
+                align-items: center;
+
+                li{
+                    list-style-type: none;
+                    margin: 0px auto;
+
+                    a{
+                        padding: 0px;
+                        display: inline;
+
+                        img{
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Lado direito do footer */
+        #info{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 150vh;
+            margin: 0px 25px;
+            padding-left: 20px;
+            
+            .infoSec{
+                padding: 0px 5px;
+
+                h4{
+                    color: white;
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                }
+
+                ul{
+                    width: 190px;
+
+                    li{
+                        padding: 5px 0px;
+                        list-style-type: none;
+                        
+                        a{
+                            font-size: 14px;
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
