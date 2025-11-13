@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+body{
+    background-color: #AEAEAE;
+}
+
 /* HEADER DA PÁGINA */
 header{
     font-family: Arial, Helvetica, sans-serif;

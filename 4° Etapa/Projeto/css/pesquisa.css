@@ -1,0 +1,323 @@
+#mapBordo{
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.486);
+        margin-right: 10px;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
+    img{
+        width: 20px;
+        margin-right: 10px;
+    }
+}
+
+#ADS{
+    background-color: white;
+    border-radius: 10px;
+    /* border: 0.5px solid black; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+
+    .anuncio{
+        border-right: 5px solid #818080;
+    }
+
+    .centro{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 60px;
+        border-left: 5px solid black;
+        height: 8vh;
+
+        h3{
+            font-weight: 900;
+            font-size: 25px;
+            translate: 0px -10px;
+        }
+
+        p{
+            font-size: 20px;
+            translate: 0px -10px;
+        }
+
+        a{
+            text-decoration: none;
+            font-weight: 900;
+            translate: 0px -10px;
+        }
+    }
+
+    .logo_anuncio{
+        margin: 0px 40px;
+        padding-left: 30px;
+        border-left: 1px solid rgba(0, 0, 0, 0.452);
+    }
+}
+
+
+
+#galeriaProdutos{
+    background-color: #D9D9D9;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    #filtro{
+        min-width: 400px;
+        padding: 10px 0px ;
+        color: rgba(0, 0, 0, 0.5);
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        margin-right: 15px;
+        border-radius: 5px;
+        border: 0.5px solid black;
+
+        .titulo_filtro{
+            display: inline-block;
+            padding: 10px 20px 10px  30px;
+        }
+
+        h3{
+            font-size: 25px;
+            padding-left: 15px;
+        }
+
+        /* Botão para tivar os filtros */
+        .tolggle-buton{
+            translate: 0px +7px;
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 28px;
+            background: #818080;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .tolggle-buton::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #D9D9D9;
+            border-radius: 25px;
+            transition: width 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+            z-index: 1;
+        }
+        .tolggle-buton::after{
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 23px;
+            height: 23px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+        .tolggle-buton:active::before{
+            width: 100%;
+            background: #D9D9D9;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tolggle-buton:active::after{
+            transform: translateX(32px);
+        }
+
+        hr{
+            width: 85%;
+            margin: 15px auto 0px;
+        }
+
+        form{
+            overflow-y: auto;
+            max-height: 600px;
+            padding: 15px 10px 0px;
+            
+            hr{
+                width: 90%;
+                margin: 15px auto;
+            }
+
+            ul{
+                list-style-type: none;
+                padding-left: 15px;
+                margin: 40px 0px;
+
+                li{
+                    margin: 10px 0px;
+
+                    input{
+                        width: 25px;
+                        height: 25px;
+                        translate: 0px +5px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+    
+    #anuncioProduto{
+        background-color: white;
+        margin-left: 15px;
+        border-radius: 5px;
+        border: 0.5px solid black;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        
+        .infoProduto{
+            display: block;
+            padding: 10px 0px;
+            
+            .produtoHorisontal{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                border-bottom: 1px solid black;
+
+            
+                .esquerda{
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+
+                    
+                    img{
+                        width: 30%;
+                    }
+                    
+                    .lado_dir{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        align-items: center;
+
+                        .estado{
+                            color: white;
+                            background-color: blue;
+                            display: inline-block;
+                            padding: 2px 5px;
+                            margin-bottom: 10px;
+                            height: 18px;
+                            margin-left: 0px;
+                        }
+
+                        h3{
+                            flex-basis: 100%;
+                        }
+
+                        a{
+                            text-decoration: none;
+                            color: blue;
+                            font-weight: 800;
+                        }
+
+                        p{
+                            background-color: #D9D9D9;
+                            margin-left: 100px;
+                            border-radius: 5px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            height: min-content;
+                            
+
+                            strong{
+                                display: inline-block;
+                                translate: +10;
+                            }
+                        }
+                    }
+                }
+                
+                .direita{
+                    min-width: 300px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    position: relative;
+                    border-left: 1px solid black;
+
+
+                    .links{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-end;
+                        flex-basis: 100%;
+                        padding: 20px 30px;
+
+                        a{
+                            
+                            img{
+                                margin: 0px 5px;
+                                width: 35px;
+                            }
+                        }
+                    }
+
+                    h2{
+                        flex-basis: 100%;
+                        font-size: 20px;
+                        text-align: center;
+
+                        strong{
+                            font-size: 40px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    form{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        flex-basis: 100%;
+
+                        input{
+                            height: 40px;
+                            width: 200px;
+                            border-radius: 25px;
+                            color: white;
+                            background-color: rgba(0, 128, 0, 0.795);
+                            border: none;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
