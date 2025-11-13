@@ -4,10 +4,15 @@
 }
 
 /* HEADER DA PÁGINA */
-
 header{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #D9D9D9;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.452);
+    max-width: 100%;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1;
 
     /* Cabeçalho principal */
     #cabPrinc{
@@ -28,6 +33,7 @@ header{
         form{
             width: 120dvh;
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             flex-wrap: nowrap;
 
@@ -39,6 +45,8 @@ header{
                 border: none;
                 border-radius: 50px;
                 translate: 0px -2px;
+                margin-left: 20px;
+                padding-left: 15px;
             }
 
             /* Icone de lupa / botão de pesquisa */
@@ -105,7 +113,12 @@ header{
                     font-weight: 800;
                     border-style: none;
                     border-right: 1px solid black;
+
+                    option{
+                        background-color: #D9D9D9;
+                    }
                 }
+
 
                 a{
                     color: black;
@@ -116,7 +129,6 @@ header{
                     text-decoration-thickness: 2px;
                     text-decoration-color: #2642c0;
                 }
-
             }
         }
 
@@ -162,7 +174,7 @@ footer{
 
         /* Lado esquerdo do footer */
         #logoSocial{
-            width: 30vh;
+            width: 30vw;
             margin-left: 62px;
             display: flex;
             flex-wrap: nowrap;
