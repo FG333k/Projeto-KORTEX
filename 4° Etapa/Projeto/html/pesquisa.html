@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Placas-mãe - AMD</title>
     <link rel="shortcut icon" href="../img/icone_kortex.png" type="image/x-icon">
+    <!-- CSS mínimo do Bootstrap (apenas modal e botões) -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+      crossorigin="anonymous"
+      media="none" onload="this.media='all'"> -->
     <link rel="stylesheet" href="../css/padrao.css">
     <link rel="stylesheet" href="../css/pesquisa.css">
+    <style id="bootstrap-modal-css">
+    /* Bootstrap Modal Styles Only */
+    .fade{transition:opacity .15s linear}.modal{position:fixed;top:0;left:0;z-index:1055;display:none;width:100%;height:100%;overflow-x:hidden;overflow-y:auto;outline:0}.modal-dialog{position:relative;width:auto;margin:.5rem;pointer-events:none}.modal.fade .modal-dialog{transition:transform .3s ease-out;transform:translate(0,-50px)}.modal.show .modal-dialog{transform:none}.modal-content{position:relative;display:flex;flex-direction:column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0}.modal-header{display:flex;flex-shrink:0;align-items:center;justify-content:space-between;padding:1rem;border-bottom:1px solid #dee2e6;border-top-left-radius:calc(.3rem - 1px);border-top-right-radius:calc(.3rem - 1px)}.modal-body{position:relative;flex:1 1 auto;padding:1rem}.btn-close{box-sizing:content-box;width:1em;height:1em;padding:.25em .25em;color:#000;border:0;border-radius:.25rem;opacity:.5;cursor:pointer;background:transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg+xml") center/1em auto no-repeat}.modal-dialog-centered{display:flex;align-items:center;min-height:calc(100% - 1rem)}.d-flex{display:flex!important}.justify-content-center{justify-content:center!important}.gap-2{gap:.5rem!important}.text-center{text-align:center!important}.p-4{padding:1.5rem!important}.mb-3{margin-bottom:1rem!important}.btn{display:inline-block;font-weight:400;line-height:1.5;color:#212529;text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.btn-primary{color:#fff;background-color:#0d6efd;border-color:#0d6efd}.btn-secondary{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-outline-secondary{color:#6c757d;border-color:#6c757d}
+    </style>
 </head>
 <body>
-    <header>
+    <header class="header_kortex">
         <div id="cabPrinc">     <!--Parte superior do cabeçalho-->
             <a href="index.html" target="_self" id="logoCabe">    <!--Link para o home do site-->
                 <img src="../img/Kortex_logomarca.png" alt="logo - KORTEX" width="250px">
@@ -176,6 +185,7 @@
             </article>
 
             <article id="anuncioProduto">       <!--Área de exibição dos produtos de acordo com o filtro-->
+                <a href="produto.html" class="exeter"></a>
                 <div class="infoProduto">
                    
                     <div class="produtoHorisontal">
@@ -195,12 +205,12 @@
                         <div class="direita">           
                             <!-- Manter os links de ação separados -->
                             <div class="links">
-                                <a href="#" target="_self" class="acao-link">
+                                <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
                                     <img src="../img/Heart.png" alt="Lista de desejos" width="25px">
-                                </a>
-                                <a href="#" target="_self" class="acao-link">
+                                </div>
+                                <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
                                     <img src="../img/Add_shopping_cart.png" alt="Carrinho" width="25px">
-                                </a>
+                                </div>
                             </div>
                             <h2>R$ <strong>4.835,00</strong></h2>
                             <form action="produto.html" method="post">
@@ -208,7 +218,25 @@
                             </form>
                         </div>
                     </div>
+                    
                 </div>
+
+                <!-- <script>
+                    let fav = document.getElementById("coracao");
+                    let car = document.getElementById("carrinho");
+                    fav.addEventListener("click", mensagem_confirm);
+                    car.addEventListener("click", addCar);
+
+                    function mensagem_confirm(){
+                        let msg = "Item adicionado a lista de desejos"
+                        alert(msg)
+                    }
+
+                    function addCar(){
+                        let msg = "Item adicionado ao carrinho"
+                        alert(msg)
+                    }
+                </script> -->
                 <!-- Multiplicar os produtos -->
                 
             </article>
@@ -351,5 +379,54 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal para Favoritos (Coração) -->
+    <div class="modal fade" id="favoritoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-4">
+                    <div class="mb-3">
+                        <img src="../img/Heart.png" alt="Favorito" width="60" class="img-fluid">
+                    </div>
+                    <h5 class="modal-title mb-3">Adicionado aos favoritos!</h5>
+                    <p class="mb-3">O produto foi adicionado à sua lista de desejos.</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            Continuar comprando
+                        </button>
+                        <a href="#" class="btn btn-primary" data-bs-dismiss="modal">
+                            Ver lista de desejos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Carrinho -->
+    <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-4">
+                    <div class="mb-3">
+                        <img src="../img/Add_shopping_cart.png" alt="Carrinho" width="60" class="img-fluid">
+                    </div>
+                    <h5 class="modal-title mb-3">Produto adicionado ao carrinho!</h5>
+                    <p class="mb-3">O produto foi adicionado ao seu carrinho de compras.</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            Continuar comprando
+                        </button>
+                        <a href="#" class="btn btn-primary" data-bs-dismiss="modal">
+                            Ver carrinho
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
