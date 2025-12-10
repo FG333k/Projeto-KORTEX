@@ -92,7 +92,7 @@
         </div>
     </header>
     <main>
-        <div id="mapBordo">     <!--Mapa de paginas para que o usuário se localize-->
+        <div id="mapBordo">     <!--Mapa de paginas para que o usuário se localize (migalhas de pão)-->
             <a href="index.html" target="_self">
                 <img src="../img/logo_kortex_pequena.png" alt="Logo KORTEX" width="25px">
             </a>
@@ -129,10 +129,12 @@
         <section id="galeriaProdutos">      <!--Área de exibição dos produtos e do filtro-->
             <article id="filtro">   <!--Filtro localizado a esquerda da página-->
                 <h3 class="titulo_filtro">Agrupar por categoria</h3>
-                <button class="tolggle-buton" id="mainToggle">
-                </button>
+                <div id="tolggle-buton" class="botao">
+                    <div id="circle"> 
+                    </div>
+                </div>
                 <hr>
-                <form action="" method="post">
+                <form action="" method="post" id="formFiltro">
                     <h3>Fabricantes</h3>
                     <hr>
                     <ul>
@@ -170,16 +172,268 @@
                         </li>
                     </ul>
                     <hr>
-                    <h3>Chipset</h3>
+                    <h3>Soquete da CPU</h3>
                     <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="Soquete" id=""> AM5
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Soquete" id=""> AM4
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Soquete" id=""> TR5 (sTR5)
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Soquete" id=""> TR4 (sTR4)
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Formato da Placa</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="Formato" id=""> ATX
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Formato" id=""> Micro-ATX
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Formato" id=""> Mini-ITX
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Formato" id=""> E-ATX
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Formato" id=""> CEB
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Formato" id=""> SSI CEB
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Memória RAM</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="Memoria" id=""> DDR5
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Memoria" id=""> DDR4
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Memoria" id=""> ECC Suportado
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Memoria" id=""> 128GB+ de RAM
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Memoria" id=""> 64GB de RAM
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Memoria" id=""> 32GB de RAM
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Slots PCI Express</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="PCIe" id=""> PCIe 5.0
+                        </li>
+                        <li>
+                            <input type="checkbox" name="PCIe" id=""> PCIe 4.0
+                        </li>
+                        <li>
+                            <input type="checkbox" name="PCIe" id=""> 3+ Slots PCIe x16
+                        </li>
+                        <li>
+                            <input type="checkbox" name="PCIe" id=""> SLI/CrossFire Suportado
+                        </li>
+                        <li>
+                            <input type="checkbox" name="PCIe" id=""> M.2 PCIe 5.0
+                        </li>
+                        <li>
+                            <input type="checkbox" name="PCIe" id=""> 3+ Slots M.2
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Conectividade</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="Conectividade" id=""> WiFi 7
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Conectividade" id=""> WiFi 6/6E
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Conectividade" id=""> 10 Gb Ethernet
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Conectividade" id=""> 2.5 Gb Ethernet
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Conectividade" id=""> Bluetooth 5.3+
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Conectividade" id=""> Thunderbolt 4
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Conectividade" id=""> USB4
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Conectividade" id=""> USB 3.2 Gen2x2
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Recursos de Áudio</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="Audio" id=""> Áudio 7.1
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Audio" id=""> DAC Dedicado
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Audio" id=""> Amplificador Headphone
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Audio" id=""> Áudio SupremeFX
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Audio" id=""> S/PDIF Óptico
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Recursos de Overclock</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="Overclock" id=""> VRM de Alta Qualidade
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Overclock" id=""> Dissipadores VRM Ativos
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Overclock" id=""> Botões de Overclock
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Overclock" id=""> Debug LED
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Overclock" id=""> BIOS Flashback
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Overclock" id=""> Clear CMOS Botão
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>RGB e Iluminação</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="RGB" id=""> ARGB Headers
+                        </li>
+                        <li>
+                            <input type="checkbox" name="RGB" id=""> RGB Headers
+                        </li>
+                        <li>
+                            <input type="checkbox" name="RGB" id=""> Iluminação On-Board
+                        </li>
+                        <li>
+                            <input type="checkbox" name="RGB" id=""> Suporte Aura Sync
+                        </li>
+                        <li>
+                            <input type="checkbox" name="RGB" id=""> Suporte Mystic Light
+                        </li>
+                        <li>
+                            <input type="checkbox" name="RGB" id=""> Suporte RGB Fusion
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Preço</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="Preco" id=""> Até R$ 1.000
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Preco" id=""> R$ 1.000 - R$ 2.000
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Preco" id=""> R$ 2.000 - R$ 3.500
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Preco" id=""> R$ 3.500 - R$ 5.000
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Preco" id=""> Acima de R$ 5.000
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Garantia</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="Garantia" id=""> 36+ meses
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Garantia" id=""> 24 meses
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Garantia" id=""> 12 meses
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Garantia" id=""> Garantia Extendida Disponível
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Compatibilidade</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="Compatibilidade" id=""> AMD Ryzen 7000
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Compatibilidade" id=""> AMD Ryzen 5000
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Compatibilidade" id=""> AMD Threadripper 7000
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Compatibilidade" id=""> AMD Threadripper 5000
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Compatibilidade" id=""> Suporte a Windows 11
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Compatibilidade" id=""> Suporte a Linux
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Recursos de Refrigeração</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="Refrigeracao" id=""> Headers para Water Cooling
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Refrigeracao" id=""> Dissipadores Passivos
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Refrigeracao" id=""> Ventoinha On-Board
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Refrigeracao" id=""> Monitores de Temperatura
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Refrigeracao" id=""> Controle de Ventoinhas
+                        </li>
+                    </ul>
 
-                    <!-- Mais filtros  -->
-                    <!-- 
-                        + !!!!!!!!!!!!!!!!!!!!
-                        + !!!!!!!!!!!!!!!!!!!!
-                        + !!!!!!!!!!!!!!!!!!!!
-                        + !!!!!!!!!!!!!!!!!!!!
-                    -->
+                    <!-- Fim dos filtros adicionais -->
 
                 </form>
             </article>
@@ -206,10 +460,10 @@
                             <!-- Manter os links de ação separados -->
                             <div class="links">
                                 <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
-                                    <img src="../img/Heart.png" alt="Lista de desejos" width="25px">
+                                    <img src="../img/Heart.png" alt="Lista de desejos">
                                 </div>
                                 <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
-                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho" width="25px">
+                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho">
                                 </div>
                             </div>
                             <h2>R$ <strong>4.835,00</strong></h2>
@@ -219,27 +473,324 @@
                         </div>
                     </div>
                     
+                    <div class="produtoHorisontal">
+                        <div class="esquerda">
+                            <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
+                            <div class="lado_dir">
+                                <p class="estado">Novo</p>
+                                <h3>ASUS Pro WS TRX50-SAGE WIFI, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 4x M.2, 10/2,5 GbE, USB 3.2 Gen2, CEB</h3>
+                                <a href="#" target="_self">NN162612</a>
+                                <p>
+                                    <img src="../img/48h.png" alt="Icone de 48horas" width="40px">
+                                    <strong>Subistituição</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="direita">           
+                            <!-- Manter os links de ação separados -->
+                            <div class="links">
+                                <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
+                                    <img src="../img/Heart.png" alt="Lista de desejos">
+                                </div>
+                                <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
+                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho">
+                                </div>
+                            </div>
+                            <h2>R$ <strong>4.835,00</strong></h2>
+                            <form action="produto.html" method="post">
+                                <input type="submit" value="COMPRAR">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="produtoHorisontal">
+                        <div class="esquerda">
+                            <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
+                            <div class="lado_dir">
+                                <p class="estado">Novo</p>
+                                <h3>ASUS Pro WS TRX50-SAGE WIFI, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 4x M.2, 10/2,5 GbE, USB 3.2 Gen2, CEB</h3>
+                                <a href="#" target="_self">NN162612</a>
+                                <p>
+                                    <img src="../img/48h.png" alt="Icone de 48horas" width="40px">
+                                    <strong>Subistituição</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="direita">           
+                            <!-- Manter os links de ação separados -->
+                            <div class="links">
+                                <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
+                                    <img src="../img/Heart.png" alt="Lista de desejos">
+                                </div>
+                                <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
+                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho">
+                                </div>
+                            </div>
+                            <h2>R$ <strong>4.835,00</strong></h2>
+                            <form action="produto.html" method="post">
+                                <input type="submit" value="COMPRAR">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="produtoHorisontal">
+                        <div class="esquerda">
+                            <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
+                            <div class="lado_dir">
+                                <p class="estado">Novo</p>
+                                <h3>ASUS Pro WS TRX50-SAGE WIFI, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 4x M.2, 10/2,5 GbE, USB 3.2 Gen2, CEB</h3>
+                                <a href="#" target="_self">NN162612</a>
+                                <p>
+                                    <img src="../img/48h.png" alt="Icone de 48horas" width="40px">
+                                    <strong>Subistituição</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="direita">           
+                            <!-- Manter os links de ação separados -->
+                            <div class="links">
+                                <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
+                                    <img src="../img/Heart.png" alt="Lista de desejos">
+                                </div>
+                                <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
+                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho">
+                                </div>
+                            </div>
+                            <h2>R$ <strong>4.835,00</strong></h2>
+                            <form action="produto.html" method="post">
+                                <input type="submit" value="COMPRAR">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="produtoHorisontal">
+                        <div class="esquerda">
+                            <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
+                            <div class="lado_dir">
+                                <p class="estado">Novo</p>
+                                <h3>ASUS Pro WS TRX50-SAGE WIFI, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 4x M.2, 10/2,5 GbE, USB 3.2 Gen2, CEB</h3>
+                                <a href="#" target="_self">NN162612</a>
+                                <p>
+                                    <img src="../img/48h.png" alt="Icone de 48horas" width="40px">
+                                    <strong>Subistituição</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="direita">           
+                            <!-- Manter os links de ação separados -->
+                            <div class="links">
+                                <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
+                                    <img src="../img/Heart.png" alt="Lista de desejos">
+                                </div>
+                                <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
+                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho">
+                                </div>
+                            </div>
+                            <h2>R$ <strong>4.835,00</strong></h2>
+                            <form action="produto.html" method="post">
+                                <input type="submit" value="COMPRAR">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="produtoHorisontal">
+                        <div class="esquerda">
+                            <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
+                            <div class="lado_dir">
+                                <p class="estado">Novo</p>
+                                <h3>ASUS Pro WS TRX50-SAGE WIFI, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 4x M.2, 10/2,5 GbE, USB 3.2 Gen2, CEB</h3>
+                                <a href="#" target="_self">NN162612</a>
+                                <p>
+                                    <img src="../img/48h.png" alt="Icone de 48horas" width="40px">
+                                    <strong>Subistituição</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="direita">           
+                            <!-- Manter os links de ação separados -->
+                            <div class="links">
+                                <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
+                                    <img src="../img/Heart.png" alt="Lista de desejos">
+                                </div>
+                                <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
+                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho">
+                                </div>
+                            </div>
+                            <h2>R$ <strong>4.835,00</strong></h2>
+                            <form action="produto.html" method="post">
+                                <input type="submit" value="COMPRAR">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="produtoHorisontal">
+                        <div class="esquerda">
+                            <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
+                            <div class="lado_dir">
+                                <p class="estado">Novo</p>
+                                <h3>ASUS Pro WS TRX50-SAGE WIFI, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 4x M.2, 10/2,5 GbE, USB 3.2 Gen2, CEB</h3>
+                                <a href="#" target="_self">NN162612</a>
+                                <p>
+                                    <img src="../img/48h.png" alt="Icone de 48horas" width="40px">
+                                    <strong>Subistituição</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="direita">           
+                            <!-- Manter os links de ação separados -->
+                            <div class="links">
+                                <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
+                                    <img src="../img/Heart.png" alt="Lista de desejos">
+                                </div>
+                                <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
+                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho">
+                                </div>
+                            </div>
+                            <h2>R$ <strong>4.835,00</strong></h2>
+                            <form action="produto.html" method="post">
+                                <input type="submit" value="COMPRAR">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="produtoHorisontal">
+                        <div class="esquerda">
+                            <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
+                            <div class="lado_dir">
+                                <p class="estado">Novo</p>
+                                <h3>ASUS Pro WS TRX50-SAGE WIFI, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 4x M.2, 10/2,5 GbE, USB 3.2 Gen2, CEB</h3>
+                                <a href="#" target="_self">NN162612</a>
+                                <p>
+                                    <img src="../img/48h.png" alt="Icone de 48horas" width="40px">
+                                    <strong>Subistituição</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="direita">           
+                            <!-- Manter os links de ação separados -->
+                            <div class="links">
+                                <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
+                                    <img src="../img/Heart.png" alt="Lista de desejos">
+                                </div>
+                                <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
+                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho">
+                                </div>
+                            </div>
+                            <h2>R$ <strong>4.835,00</strong></h2>
+                            <form action="produto.html" method="post">
+                                <input type="submit" value="COMPRAR">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="produtoHorisontal">
+                        <div class="esquerda">
+                            <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
+                            <div class="lado_dir">
+                                <p class="estado">Novo</p>
+                                <h3>ASUS Pro WS TRX50-SAGE WIFI, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 4x M.2, 10/2,5 GbE, USB 3.2 Gen2, CEB</h3>
+                                <a href="#" target="_self">NN162612</a>
+                                <p>
+                                    <img src="../img/48h.png" alt="Icone de 48horas" width="40px">
+                                    <strong>Subistituição</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="direita">           
+                            <!-- Manter os links de ação separados -->
+                            <div class="links">
+                                <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
+                                    <img src="../img/Heart.png" alt="Lista de desejos">
+                                </div>
+                                <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
+                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho">
+                                </div>
+                            </div>
+                            <h2>R$ <strong>4.835,00</strong></h2>
+                            <form action="produto.html" method="post">
+                                <input type="submit" value="COMPRAR">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="produtoHorisontal">
+                        <div class="esquerda">
+                            <img src="../img/imagem_produto_pag_pesquisa.png" alt="Imagem produto" width="200px">
+                            <div class="lado_dir">
+                                <p class="estado">Novo</p>
+                                <h3>ASUS Pro WS TRX50-SAGE WIFI, AMD TRX50, sTR5, DDR5, SATA3, PCIe 5.0, 4x M.2, 10/2,5 GbE, USB 3.2 Gen2, CEB</h3>
+                                <a href="#" target="_self">NN162612</a>
+                                <p>
+                                    <img src="../img/48h.png" alt="Icone de 48horas" width="40px">
+                                    <strong>Subistituição</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="direita">           
+                            <!-- Manter os links de ação separados -->
+                            <div class="links">
+                                <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
+                                    <img src="../img/Heart.png" alt="Lista de desejos">
+                                </div>
+                                <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
+                                    <img src="../img/Add_shopping_cart.png" alt="Carrinho">
+                                </div>
+                            </div>
+                            <h2>R$ <strong>4.835,00</strong></h2>
+                            <form action="produto.html" method="post">
+                                <input type="submit" value="COMPRAR">
+                            </form>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- <script>
-                    let fav = document.getElementById("coracao");
-                    let car = document.getElementById("carrinho");
-                    fav.addEventListener("click", mensagem_confirm);
-                    car.addEventListener("click", addCar);
-
-                    function mensagem_confirm(){
-                        let msg = "Item adicionado a lista de desejos"
-                        alert(msg)
-                    }
-
-                    function addCar(){
-                        let msg = "Item adicionado ao carrinho"
-                        alert(msg)
-                    }
-                </script> -->
                 <!-- Multiplicar os produtos -->
                 
             </article>
+            <script>
+                let tolggle = document.getElementById("tolggle-buton");
+                let cir = document.getElementById("circle");
+                let form = document.getElementById("formFiltro");
+                let galeria = document.getElementById("galeriaProdutos");
+                let filtro = document.getElementById("filtro");
+                let anucioProd = document.getElementById("anuncioProduto");
+                let eAtivo = false;
+
+                galeria.style.flexDirection="row";
+                galeria.style.justifyContent="start"
+                anucioProd.style.marginLeft="15px";
+                filtro.style.marginRight="15px";
+                form.style.display="block"
+
+                tolggle.addEventListener("click", function(){
+                    eAtivo = !eAtivo;
+
+                    if(!eAtivo){
+                        cir.style.transform="translateX(0px)";
+                        form.style.display="none"
+                        galeria.style.flexDirection="column"
+                        galeria.style.justifyContent="start"
+                        anucioProd.style.margin="0px";
+                        filtro.style.margin="0px 0px 5px";
+                        
+                    }else{
+                        cir.style.transform="translateX(31px)";
+                        form.style.display="block";
+                        galeria.style.flexDirection="row"
+                        anucioProd.style.marginLeft="15px";
+                        filtro.style.marginRight="15px";
+                    }
+                });
+                
+            </script>
         </section>
     </main>
     <footer>
@@ -377,6 +928,9 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div id="foot"">
+            <p>&copy 2025 <a href="https://github.com/FG333k/Projeto-KORTEX" target="_blank">Kortex</a> - <a href="https://github.com/FG333k" target="_blank">DevBy F-Corp</a></p>
         </div>
     </footer>
 

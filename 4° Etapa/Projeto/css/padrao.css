@@ -17,7 +17,7 @@ body{
     position: sticky !important;
     left: 0 !important;
     top: 0 !important;
-    z-index: 1030 !important;
+    z-index: 1000 !important;
 
     /* Cabeçalho principal */
     #cabPrinc{
@@ -262,6 +262,30 @@ footer{
                         }
                     }
                 }
+            }
+        }
+    }
+
+    #foot{
+        background-color: black;
+        color: white;
+        padding: 5px 0px;
+
+        p{
+            text-align: center;
+
+            a{
+                color: white;
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration: overline;
+            }
+            a:active{
+                color: #2642c0;
+            }
+            a:visited{
+                color: darkslateblue;
             }
         }
     }

@@ -7,6 +7,10 @@
     <link rel="shortcut icon" href="../img/icone_kortex.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/padrao.css">
     <link rel="stylesheet" href="../css/produto.css">
+    <style id="bootstrap-modal-css">
+    /* Bootstrap Modal Styles Only */
+    .fade{transition:opacity .15s linear}.modal{position:fixed;top:0;left:0;z-index:1055;display:none;width:100%;height:100%;overflow-x:hidden;overflow-y:auto;outline:0}.modal-dialog{position:relative;width:auto;margin:.5rem;pointer-events:none}.modal.fade .modal-dialog{transition:transform .3s ease-out;transform:translate(0,-50px)}.modal.show .modal-dialog{transform:none}.modal-content{position:relative;display:flex;flex-direction:column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0}.modal-header{display:flex;flex-shrink:0;align-items:center;justify-content:space-between;padding:1rem;border-bottom:1px solid #dee2e6;border-top-left-radius:calc(.3rem - 1px);border-top-right-radius:calc(.3rem - 1px)}.modal-body{position:relative;flex:1 1 auto;padding:1rem}.btn-close{box-sizing:content-box;width:1em;height:1em;padding:.25em .25em;color:#000;border:0;border-radius:.25rem;opacity:.5;cursor:pointer;background:transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg+xml") center/1em auto no-repeat}.modal-dialog-centered{display:flex;align-items:center;min-height:calc(100% - 1rem)}.d-flex{display:flex!important}.justify-content-center{justify-content:center!important}.gap-2{gap:.5rem!important}.text-center{text-align:center!important}.p-4{padding:1.5rem!important}.mb-3{margin-bottom:1rem!important}.btn{display:inline-block;font-weight:400;line-height:1.5;color:#212529;text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.btn-primary{color:#fff;background-color:#0d6efd;border-color:#0d6efd}.btn-secondary{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-outline-secondary{color:#6c757d;border-color:#6c757d}
+    </style>
 </head>
 <body>
     <header class="header_kortex">
@@ -87,13 +91,13 @@
             <a href="index.html" target="_self">
                 <img src="../img/logo_kortex_pequena.png" alt="Logo KORTEX" width="25px">
             </a>
-            >
+            <img src="../img/icone_seta.png" alt=" > ">
             <a href="#">Hardware de computados</a>
-            >
+            <img src="../img/icone_seta.png" alt=" > ">
             <a href="pesquisa.html" target="_self">Placas-mãe - AMD</a>
-            >
+            <img src="../img/icone_seta.png" alt=" > ">
             <a href="#">AMD TRX50 - TR5</a>
-            >
+            <img src="../img/icone_seta.png" alt=" > ">
             <a href="#">ASUS Pro WS TRX50-SAGE WIFI</a>
         </div>
 
@@ -124,8 +128,10 @@
                     <h2>R$ <strong>4.835,00</strong></h2>
                     <!-- Botões de ação para compartilhar ou adcionar a lista de desejos -->
                     <div class="img">
-                        <img src="../img/Share.png" alt="Compartilhar" width="50px">
-                        <img src="../img/Heart.png" alt="Lista de desejos">
+                        <img src="../img/Share.png" alt="Compartilhar" width="60px">
+                        <div id="coracao" class="icon-link" data-bs-toggle="modal" data-bs-target="#favoritoModal" style="cursor: pointer;">
+                            <img src="../img/Heart.png" alt="Lista de desejos" width="60px">
+                        </div>
                     </div>
                 </div>
 
@@ -137,7 +143,9 @@
                         COMPRAR AGORA
                     </a>
                     <div class="linha_inf">
-                        <p><img src="../img/Add_shopping_cart.png" alt="Carrinhho">Adcione ao carrinho</p>  <!--Opção de adcionar ao carrinho de compras-->
+                        <div id="carrinho" class="icon-link" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="cursor: pointer;">
+                            <p><img src="../img/Add_shopping_cart.png" alt="Carrinhho">Adcione ao carrinho</p>
+                        </div>  <!--Opção de adcionar ao carrinho de compras-->
                         <p id="Estado">Em estoque</p>
                     </div>
                 </div>
@@ -153,32 +161,42 @@
                         <img src="../img/Notifications.png" alt="Icone de sino">
                         <p><strong>Envie-me um e-mail</strong> quando a disponibilidade ou o preço mudar</p>
                     </div>
-                    <button>Notifique-me</button>
+                
+                    <button id="notificacao" class="icon-link" data-bs-toggle="modal" data-bs-target="#notificacaoModal" style="cursor: pointer;">Notifique-me</button>
+                    
                 </div>
 
                 <details>   <!--Opções de entrega-->
                     <summary>Ver opçõe de entrega</summary>
-                    <h4>Entrega grátis</h4>
-                    <p>
-                        <strong>Entraga em até 5 dias úteis</strong> Para compras acima de 299,00
-                    </p>
-                    <hr>
-                    <h4>Entrega rápida / padrão</h4>
-                    <p>
-                        <strong>Entrega em até 7 dias úteis</strong> por R$ 14,90
-                    </p>
-                    <hr>
-                    <h4>Entrega Expressa</h4>
-                    <p><strong>Entrega em até 2 dias úteis</strong> por R$ 29,90</p>
+                    <div class="content">
+                        <h4>Entrega grátis</h4>
+                        <p>
+                            <strong>Entraga em até 5 dias úteis</strong> Para compras acima de 299,00
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="content">
+                        <h4>Entrega rápida / padrão</h4>
+                        <p>
+                            <strong>Entrega em até 7 dias úteis</strong> por R$ 14,90
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="content">
+                        <h4>Entrega Expressa</h4>
+                        <p><strong>Entrega em até 2 dias úteis</strong> por R$ 29,90</p>
+                        <hr>
+                    </div>
                 </details>
-                <hr>
                 
                 <details>   <!--Opções de financiamento / parcelamento-->
                     <summary>Financie este produto</summary>
-                    <h3>À Vista: R$ 4.835,00 (no PIX com 5% de desconto = R$ 4.593,25)</h3>
-                    <h3>Ou em até 3x de R$ 1.611,67 (sem juros)</h3>
+                    <div class="content">
+                        <h3 id="aVista">À Vista: R$ 4.835,00 (no PIX com 5% de desconto = R$ 4.593,25)</h3>
+                        <h3 id="dividido">Ou em até 3x de R$ 1.611,67 (sem juros)</h3>
+                        <hr>
+                    </div>
                 </details>
-                <hr>
                 
                 <div class="info_ext"><!--Segurança da loja-->
                     <img src="../img/KortexProtect.png" alt="Icone da logo KortexProtect" width="40px">
@@ -705,6 +723,9 @@
                 </div>
             </div>
         </div>
+        <div id="foot"">
+            <p>&copy 2025 <a href="https://github.com/FG333k/Projeto-KORTEX" target="_blank">Kortex</a> - <a href="https://github.com/FG333k" target="_blank">DevBy F-Corp</a></p>
+        </div>
     </footer>
 
     <script>
@@ -743,5 +764,100 @@
             new ProductTabs();
         });
     </script>
+     <!-- Modal para Favoritos (Coração) -->
+    <div class="modal fade" id="favoritoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-4">
+                    <div class="mb-3">
+                        <img src="../img/Heart.png" alt="Favorito" width="60" class="img-fluid">
+                    </div>
+                    <h5 class="modal-title mb-3">Adicionado aos favoritos!</h5>
+                    <p class="mb-3">O produto foi adicionado à sua lista de desejos.</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            Continuar comprando
+                        </button>
+                        <a href="#" class="btn btn-primary" data-bs-dismiss="modal">
+                            Ver lista de desejos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Carrinho -->
+    <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-4">
+                    <div class="mb-3">
+                        <img src="../img/Add_shopping_cart.png" alt="Carrinho" width="60" class="img-fluid">
+                    </div>
+                    <h5 class="modal-title mb-3">Produto adicionado ao carrinho!</h5>
+                    <p class="mb-3">O produto foi adicionado ao seu carrinho de compras.</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            Continuar comprando
+                        </button>
+                        <a href="#" class="btn btn-primary" data-bs-dismiss="modal">
+                            Ver carrinho
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Notificação -->
+    <div class="modal fade" id="notificacaoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-4">
+                    <div class="mb-3">
+                        <img src="../img/Notifications.png" alt="Carrinho" width="60" class="img-fluid">
+                    </div>
+                    <h5 class="modal-title mb-3">Preencha seus dados!</h5>
+                    <p class="mb-3">Você será notificado sempre que houver alterações nesse produto</p>
+                    <form action="">
+                        <input type="text" name="" class="input" placeholder="Nome: ">
+                        <input type="text" name="" class="input" placeholder="Email: ">
+                    </form>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" id="b1">
+                            Cancelar
+                        </button>
+                        <a href="#" class="btn btn-primary" data-bs-dismiss="modal" id="b2">
+                            Notifique-me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Seta todos os elementos utiliazados (campos de input, botões e o botão para abri o modal)
+        let inputs = document.getElementsByClassName("input");
+        let btn1 = document.getElementById("b1");   
+        let btn2 = document.getElementById("b2");   // Posteriormente substituída pelo envio do formulário
+        let butonNotificacao = document.getElementById("notificacao");  // Ao invez de apagar os campos no mmomento de sair do modal, limpa quanto tenta entraar novamente (previnindo "lixo")
+
+        // Cada botão ativa a função que vai limpar os campos
+        btn1.addEventListener("click", limparCampos)
+        btn2.addEventListener("click", limparCampos);
+        butonNotificacao.addEventListener("click", limparCampos);
+
+
+        function limparCampos(){
+            // Como é um campo de input não é um simples texContent e sim um array de valores por isso deve ser iterada
+            for(let i = 0; i < inputs.length; i++){
+                inputs[i].value = "";
+            }
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

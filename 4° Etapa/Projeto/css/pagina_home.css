@@ -16,16 +16,26 @@
     justify-content: space-between;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    position: relative;
 
     h2{
         color: white;
         margin-left: 15px;
     }
 
+    .area-numeros{
+        position: absolute;
+        top: 2.5%;
+        left: 50%;
+        translate: -50%;
+        font-size: 25px;
+        font-weight: bolder;
+        color: white;
+    }
+
     a{
         margin-right: 15px;
-        padding: 5px 10px;
+        padding: 5px 10px 5px 20px;
         font-weight: 800;
         font-size: 16px;
         text-decoration: none;
@@ -33,6 +43,14 @@
         color: white;
         border-radius: 50px;
         transition-duration: 0.2s;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+
+        #seta{
+            width: 25px;
+        }
     }
     a:hover{
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.507);
@@ -74,12 +92,18 @@
 
             .valorProduto{
                 margin: 20px 0px 5px 20px;
+                text-decoration: none;
+                font-weight: bolder;
 
-                text-decoration: line-through;
-                color: rgba(0, 0, 0, 0.521);
+                .desc{
+                    font-size: 13px;
 
-                strong{
-                    color: black;
+                    span{
+                        text-decoration: line-through;
+                        font-weight: normal;
+                        color: rgba(0, 0, 0, 0.521);
+                        font-weight: normal;
+                    }
                 }
             }
 
@@ -96,18 +120,10 @@
                         display: inline-block;
                         width: 10px;
 
-
-
-                        a{
-                            background-color: rgba(0, 0, 0, 0);
+                        img{
+                            
                             width: 10px;
-                            padding: 0px;
-                            margin: 0px;
-
-                            img{
-                                width: 10px;
-                                background-color: #FFFFFF;
-                            }
+                            background-color: #FFFFFF;
                         }
                     }
                 }

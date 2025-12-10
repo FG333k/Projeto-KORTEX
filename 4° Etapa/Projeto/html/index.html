@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KORTEX TECH - E-Commerce Tech</title>
     <meta name="description" content="KORTEX TECH - E-Commerce de tecnologia">
-    <title>KORTEX TECH</title>
+    <title>KORTEX TECH - E-Commerce Tech</title>
     <link rel="shortcut icon" href="../img/icone_kortex.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/padrao.css">
     <link rel="stylesheet" href="../css/pagina_home.css">
@@ -18,7 +17,7 @@
             </a>
 
             <!-- Áreade pesquisa -->
-            <form action="" method="post">
+            <form action="#" method="post">
                 <input type="text" name="" id="campoPesquisa">       <!--Barra de pesquisa-->
                 <!--<input type="submit" name="pesquisar">-->  <!--Botão de envio-->
 
@@ -27,7 +26,7 @@
                 </a>
             </form>
 
-            <!-- Opções de coneção / cadastro -->
+            <!-- Opções de conexão / cadastro -->
             <ul id="conect">
                 <li>
                     <a href="#" target="_self">LOGIN</a>
@@ -89,11 +88,47 @@
         </div>
         <section id="promocao">     <!--Área de produtod em destaque / promoção-->
             <h2>OFERTAS DO DIA</h2>
-            <h2> 25:25:48 </h2>
+            <div class="area-numeros">  <!--Area da contágem regressiva-->
+                <span id="numero-hora">--</span> :
+                <span id="numero-minuto">--</span> :
+                <span id="numero-segundo">--</span>
+            </div>
+            <script>
+                // Função para exibir a hora restante para a promoção
+                function atualizacaoRelogio(){
+                    // Dados da hora atual, marco do fum do dia e tempo resntante entre eles
+                    const agora = new Date();
+                    const fimDia = new Date();
+                    fimDia.setHours(23, 59, 59, 999);
+
+                    const tempoRestante = fimDia - agora;
+
+                    // Verificação do tempo restante para a promoção
+                    if(tempoRestante > 0){
+                        // Converte o tempo resntante em segundos
+                        const totalSegundos = Math.floor(tempoRestante / 1000);
+
+                        // Atribui seu respectívo valor a cada parte do formato de hora
+                        const hora = Math.floor(totalSegundos / 3600);
+                        const minutos = Math.floor((totalSegundos % 3600) / 60);
+                        const segundos = totalSegundos % 60;
+
+                        // Altera os elementos na tela os formatando
+                        document.getElementById("numero-hora").textContent = String(hora).padStart(2, '0');
+                        document.getElementById("numero-minuto").textContent = String(minutos).padStart(2, '0');
+                        document.getElementById("numero-segundo").textContent = String(segundos).padStart(2, '0');
+                    }
+                }
+
+                // Tempo para a proxima execução em 1 segundo
+                setInterval(atualizacaoRelogio, 1000);
+                atualizacaoRelogio();   // Chama a função ao abrir a página
+
+            </script>
             <a href="#" target="_self">
                 VER MAIS
                 <!-- Colocar a imagem de >  -->
-                <img src="#" alt=">">
+                <img src="../img/icone_seta.png" alt=">" id="seta">
             </a>
             <div id="anuncios">
                 <div class="produto">       <!--Modelo do produto-->
@@ -101,34 +136,24 @@
                     <img src="../img/imagen_produto_home.png" alt="Imágen do produto" width="250" class="immg_produto_anuncio_promocao">
                     <h4>ASUS Zenbook 14 OLED</h4>
                     <p class="valorProduto">
-                        <strong>8.880</strong> R$10.000 <strong>| 11% OFF</strong>
+                        R$ 8.880 <span class="desc"><span>R$10.000</span> | 11% OFF</span>
                     </p>    
                     <div class="avaliacoes">
                         <ul class="listAvaliacao">
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                         </ul>
                         <p>     <!--Número de vendas-->
@@ -152,34 +177,24 @@
                     <img src="../img/imagen_produto_home.png" alt="Imágen do produto" width="250" class="immg_produto_anuncio_promocao">
                     <h4>ASUS Zenbook 14 OLED</h4>
                     <p class="valorProduto">
-                        <strong>8.880</strong> R$10.000 <strong>| 11% OFF</strong>
+                        R$ 8.880 <span class="desc"><span>R$10.000</span> | 11% OFF</span>
                     </p>    
                     <div class="avaliacoes">
                         <ul class="listAvaliacao">
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                         </ul>
                         <p>     <!--Número de vendas-->
@@ -203,34 +218,24 @@
                     <img src="../img/imagen_produto_home.png" alt="Imágen do produto" width="250" class="immg_produto_anuncio_promocao">
                     <h4>ASUS Zenbook 14 OLED</h4>
                     <p class="valorProduto">
-                        <strong>8.880</strong> R$10.000 <strong>| 11% OFF</strong>
+                        R$ 8.880 <span class="desc"><span>R$10.000</span> | 11% OFF</span>
                     </p>    
                     <div class="avaliacoes">
                         <ul class="listAvaliacao">
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                         </ul>
                         <p>     <!--Número de vendas-->
@@ -254,34 +259,24 @@
                     <img src="../img/imagen_produto_home.png" alt="Imágen do produto" width="250" class="immg_produto_anuncio_promocao">
                     <h4>ASUS Zenbook 14 OLED</h4>
                     <p class="valorProduto">
-                        <strong>8.880</strong> R$10.000 <strong>| 11% OFF</strong>
+                        R$ 8.880 <span class="desc"><span>R$10.000</span> | 11% OFF</span>
                     </p>    
                     <div class="avaliacoes">
                         <ul class="listAvaliacao">
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                             <li>
-                                <a href="#" target="_self">    <!--Pagina de avaliação-->
-                                    <img src="../img/Star.png" alt="Estrela">
-                                </a>
+                                <img src="../img/Star.png" alt="Estrela">
                             </li>
                         </ul>
                         <p>     <!--Número de vendas-->
@@ -305,7 +300,7 @@
 
         <section id="sugestoes">    <!--Seção de sujestões-->
             <a href="#" target="_self">
-                <div id="sugest1">    <!--Usar background na div-->
+                <div id="sugest1">
                     <h2>LANÇAMENTOS <br> DO MES</h2>
                 </div>
             </a>
@@ -555,6 +550,9 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div id="foot"">    <!--Area de "creditos"-->
+            <p>&copy 2025 <a href="https://github.com/FG333k/Projeto-KORTEX" target="_blank">Kortex</a> - <a href="https://github.com/FG333k" target="_blank">DevBy F-Corp</a></p>
         </div>
     </footer>
 </body>
